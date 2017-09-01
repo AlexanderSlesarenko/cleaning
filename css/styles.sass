@@ -1,0 +1,317 @@
+=link()
+  text-decoration: none
+=menu_mobile_icon()
+  margin-top: 6px
+  margin-right: 6px
+  transition: all .2s ease
+  border-radius: 6px
+  position: relative
+  cursor: pointer
+  height: 50px
+  width: 50px
+  z-index: 1
+  display: none
+  float: right
+  &.active
+    &:before
+      transform: rotate(45deg)
+      -webkit-transform: rotate(45deg)
+      margin-top: -2px
+    &:after
+      transform: rotate(-45deg)
+      -webkit-transform: rotate(-45deg)
+      margin-top: -2px
+  &:before
+    margin-top: -7px
+    transition: all .2s ease
+    position: absolute
+    margin-left: -13px
+    content: ""
+    width: 26px
+    height: 4px
+    left: 50%
+    top: 50%
+  &:after
+    margin-top: 3px
+    transition: all .2s ease
+    position: absolute
+    margin-left: -13px
+    content: ""
+    width: 26px
+    height: 4px
+    left: 50%
+    top: 50%
+=logo()
+  display: inline-block
+  height: 40px
+  width: 160px
+  margin-left: 20px
+  margin-top: 17px
+  background-repeat: no-repeat
+  background-size: contain
+=menu()
+  margin-right: 20px
+  float: right
+  .menu_item
+    display: inline-block
+    line-height: 61px
+    font-size: 14px
+    &.option
+      margin-right: 20px
+      &.phone
+        *
+          color: #222
+        a
+          text-decoration: none
+          img
+            vertical-align: middle
+        img
+          height: 20px
+          width: 20px
+      a
+        +link()
+    button
+      font-size: 14px
+      line-height: 1.8
+      margin-bottom: 1px
+      border-radius: 6px !important
+      padding: 5px 15px
+@font-face
+  font-family: "MuseoSansMedium"
+  src: url("../fonts/MuseoSansMedium.eot")
+  src: url("../fonts/MuseoSansMedium.eot?#iefix") format("embedded-opentype")
+  src: url("../fonts/MuseoSansMedium.woff") format("woff")
+  src: url("../fonts/MuseoSansMedium.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+@font-face
+  font-family: "MuseoSansBold"
+  src: url("../fonts/MuseoSansBold.eot")
+  src: url("../fonts/MuseoSansBold.eot?#iefix") format("embedded-opentype")
+  src: url("../fonts/MuseoSansBold.woff") format("woff")
+  src: url("../fonts/MuseoSansBold.ttf") format("truetype")
+  font-style: normal
+@font-face
+  font-family: "MuseoSansRegular"
+  src: url("../fonts/MuseoSansRegular.eot")
+  src: url("../fonts/MuseoSansRegular.eot?#iefix") format("embedded-opentype")
+  src: url("../fonts/MuseoSansRegular.woff") format("woff")
+  src: url("../fonts/MuseoSansRegular.ttf") format("truetype")
+  font-style: normal
+
+body
+  margin: 0
+  *
+    font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif
+
+#nav
+  background-color: #ffffff
+  transition: all .3s ease
+  box-shadow: none
+  position: fixed
+  z-index: 900
+  height: 60px
+  width: 100%
+  top: -70px
+  opacity: .2
+  &.visible
+    opacity: 1
+    top: 0
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.3)
+  .logo
+    background-image: url(../img/logo_white.svg)
+    +logo()
+  .menu
+    @media (max-width: 1075px)
+      display: none
+    +menu()
+    .menu_item
+      &.option
+        a
+          color: #8c8c8c
+          transition: color 0.3s
+          -webkit-transition: color 0.3s
+          -moz-transition: color 0.3s
+          -o-transition: color 0.3s
+          &:hover
+            color: #222
+  .menu_mobile_icon
+    +menu_mobile_icon()
+    @media (max-width: 1075px)
+      display: inline-block
+    &:before,
+    &:after
+      background-color: #222
+  *
+    font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
+    letter-spacing: .8px
+#top_block
+  position: relative
+  height: calc(100vh - 25px)
+  min-height: 555px
+  .back_image
+    height: 100%
+    width: 100%
+    background-size: cover
+    position: absolute
+    background-image: url(../img/kvartira.jpg)
+    @media (max-width: 600px)
+      -webkit-filter: blur(5px)
+      -moz-filter: blur(5px)
+      -o-filter: blur(5px)
+      -ms-filter: blur(5px)
+      filter: blur(5px)
+  .header
+    position: relative
+    .logo
+      background-image: url(../img/logo_white.svg)
+      +logo()
+    .menu
+      @media (max-width: 890px)
+        display: none
+      *
+        font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
+        letter-spacing: .8px
+      +menu()
+      .menu_item
+        &.option
+          &:last-of-type
+            margin-right: 0
+          *
+            text-shadow: 0 1px 2px rgba(0,0,0,.25)
+          a
+            color: #ffffff
+          &.phone.novostrojki
+            *
+              color: #fae12e
+          &.phone.vtorichka
+            *
+              color: #ffc228
+    .menu_mobile_icon
+      +menu_mobile_icon()
+      @media (max-width: 890px)
+        display: inline-block
+      &:before,
+      &:after
+        background-color: #fff
+  .content
+    position: relative
+    margin: 0 auto
+    max-width: 940px
+    padding-top: 70px
+    padding-bottom: 40px
+    @media (max-width: 1000px)
+      max-width: 710px
+    @media (max-width: 735px)
+      max-width: 510px
+      padding-top: 50px
+    @media (max-width: 567px)
+      width: 80%
+    @media (max-width: 400px)
+      padding-top: 30px
+    .moto
+      h2
+        font-weight: normal
+        margin: 0
+      *
+        color: #fff
+        text-shadow: 0 1px 2px rgba(0,0,0,.25)
+        font-size: 40px
+        line-height: 50px
+        @media (max-width: 1000px)
+          font-size: 35px
+          line-height: 40px
+          display: inline-block
+      h1
+        font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
+      h2
+        @media (max-width: 735px)
+          font-size: 20px
+          line-height: 23px
+          br
+            display: none
+  .top_form_wrapper
+    position: absolute
+    bottom: 120px
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+    text-align: center
+    @media (max-width: 700px)
+      bottom: 33px
+    .top_form
+      display: inline-block
+      background: hsla(0,0%,100%,.95)
+      padding: 20px
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.25)
+      text-align: center
+      border-radius: 6px
+      padding-bottom: 13px
+      .region
+        margin-top: 8px
+        color: #a9a9a9
+        margin-left: auto
+        margin-right: auto
+        font-size: 15px
+        @media (max-width: 700px)
+          color: #fff
+        @media (max-width: 400px)
+          width: 80%
+      @media (max-width: 700px)
+        background-color: transparent
+        border: none
+        box-shadow: none
+        width: 300px
+      @media (max-width: 400px)
+        width: unset
+      input
+        margin-right: 20px
+        @media (max-width: 700px)
+          border: none
+          margin-right: 0
+          margin-bottom: 5px
+          width: calc(100% - 30px)
+          @media (max-width: 400px)
+            width: calc(80% - 30px)
+      button
+        height: 40px
+        font-size: 16px
+        padding-left: 16px
+        padding-right: 16px
+        @media (max-width: 700px)
+          width: 100%
+        @media (max-width: 400px)
+          width: 80%
+  .top_pointer_wrapper
+    margin-left: -100px
+    position: absolute
+    bottom: -55px
+    height: 82px
+    width: 200px
+    z-index: 1
+    left: 50%
+    cursor: pointer
+    .top_pointer
+      display: block
+      -webkit-animation: _1SPxwonwfe0SdBCvZcLsRX 1s infinite
+      animation: _1SPxwonwfe0SdBCvZcLsRX 1s infinite
+      margin: 6px auto 0
+      position: relative
+      height: 34px
+      width: 34px
+      border-radius: 100px
+      border: 1px solid #d9d9d9
+      background: #fff
+      &:before
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        top: 9px
+        left: 11px
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+        border: 2px solid #000
+        border-left: none
+        border-top: none
