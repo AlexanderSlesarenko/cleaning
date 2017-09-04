@@ -1173,7 +1173,7 @@ body .accordion_header {
         margin-top: 10px;
         margin-bottom: 10px; }
       #prices .item .content button {
-        width: 240px;
+        width: calc(100% - 60px);
         font-size: 16px;
         height: 40px;
         margin: 0 30px; }
