@@ -316,6 +316,52 @@ body
   &.order
     .sub_header
       margin-top: 14px!important
+    .picker
+      display: flex
+      .minus,
+      .plus
+        border: 1px solid #d9d9d9
+        position: relative
+        background: #fff
+        min-width: 50px
+        cursor: pointer
+        height: 40px
+        &:after
+          content: ""
+          margin: -1px 0 0 -7px
+          position: absolute
+          background: #000
+          width: 14px
+          height: 2px
+          left: 50%
+          top: 50%
+      .minus
+        border-right: none
+        border-radius: 4px 0 0 4px
+      .value
+        line-height: 40px
+        height: 40px
+        border: 1px solid #d9d9d9
+        text-align: center
+        background: #fff
+        width: 150px
+        font-size: 15px
+      .plus
+        border-left: none
+        border-radius: 0 4px 4px 0
+        &:before
+          content: ""
+          margin: -1px 0 0 -7px
+          position: absolute
+          background: #000
+          width: 14px
+          height: 2px
+          left: 50%
+          top: 50%
+          -webkit-transform: rotate(90deg)
+          transform: rotate(90deg)
+
+
   &.grey
     background-color: #f8f8f8
   .wrapper
@@ -405,7 +451,7 @@ body
     padding: 0 15px
     font-size: 15px
     height: 40px
-    border: 1px solid rgba(0, 0, 0, 0.15)
+    border: 1px solid #d9d9d9
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
     transition: border-color ease-in-out .3s, box-shadow ease-in-out .3s
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
