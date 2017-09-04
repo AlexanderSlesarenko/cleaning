@@ -1057,6 +1057,18 @@ body .accordion_header {
     #slider img.active {
       opacity: 1; }
 
+#slider_text {
+  display: none; }
+  @media (max-width: 920px) {
+    #slider_text {
+      display: block; } }
+  #slider_text > .item {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease; }
+    #slider_text > .item.active {
+      opacity: 1; }
+
 #prices {
   margin-top: 50px;
   display: -webkit-flex;

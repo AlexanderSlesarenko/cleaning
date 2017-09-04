@@ -105,9 +105,11 @@ function set_slider_buttons_click_listener() {
     $('#slider_buttons .item.active').removeClass('active');
     $(that).addClass('active');
     $('#slider img.active').removeClass('active');
+    $('#slider_text > .item').removeClass('active');
     $('#slider img[name="' + $(that).data('name') + '"]').addClass('active');
+    $('#slider_text > .item[data-name="' + $(that).data('name') + '"]').addClass('active');
   }
-  $("#slider_buttons .first .item:first-of-type, #slider img:first-of-type").addClass('active');
+  $("#slider_buttons .first .item:first-of-type, #slider img:first-of-type, #slider_text > .item:first-of-type").addClass('active');
   $("#slider_buttons .item").on('click', function() {
       clearInterval(intervalID);
       click_callback(this);

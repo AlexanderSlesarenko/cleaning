@@ -929,6 +929,16 @@ body
     width: 100%
     &.active
       opacity: 1
+#slider_text
+  display: none
+  @media (max-width: 920px)
+    display: block
+  &>.item
+    opacity: 0
+    position: absolute
+    transition: all .3s ease
+    &.active
+      opacity: 1
 #prices
   margin-top: 50px
   display: -webkit-flex
