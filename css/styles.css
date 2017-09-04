@@ -953,14 +953,10 @@ body .accordion_header {
         display: none; } }
 
 #slider_buttons {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   margin-top: 30px;
-  margin-bottom: 25px; }
-  @media (max-width: 969px) {
+  margin-bottom: 25px;
+  display: none; }
+  @media (max-width: 920px) {
     #slider_buttons {
       display: block;
       width: 80%;
@@ -1049,6 +1045,9 @@ body .accordion_header {
       height: 63.75vw;
       margin-left: auto;
       margin-right: auto; } }
+  @media (max-width: 920px) {
+    #slider {
+      display: none; } }
   #slider img {
     opacity: 0;
     position: absolute;
