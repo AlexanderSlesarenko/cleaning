@@ -932,9 +932,22 @@ body
 #slider_text
   height: 200px
   display: none
+  width: 60%
+  position: relative
+  margin-left: auto
+  margin-right: auto
   @media (max-width: 920px)
     display: block
+  @media (max-width: 800px)
+    width: 80%
+  @media (max-width: 550px)
+    width: 90%
+  @media (max-width: 440px)
+    width: 97%
+  @media (max-width: 388px)
+    height: 235px
   &>.item
+    margin: 0
     list-style-type: none
     opacity: 0
     position: absolute
@@ -943,10 +956,10 @@ body
       opacity: 1
     li
       position: relative
-      font-size: 20px
+      font-size: 19px
       padding: 0 0 5px 24px
       @media (max-width: 750px)
-        font-size: 17px
+        font-size: 16px
       &:before
         position: absolute
         content: "\2014"
