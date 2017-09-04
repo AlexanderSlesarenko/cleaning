@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "MuseoSansMedium";
   src: url("../fonts/MuseoSansMedium.eot");
@@ -1058,16 +1059,28 @@ body .accordion_header {
       opacity: 1; }
 
 #slider_text {
+  height: 200px;
   display: none; }
   @media (max-width: 920px) {
     #slider_text {
       display: block; } }
   #slider_text > .item {
+    list-style-type: none;
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease; }
     #slider_text > .item.active {
       opacity: 1; }
+    #slider_text > .item li {
+      position: relative;
+      font-size: 20px;
+      padding: 0 0 5px 24px; }
+      #slider_text > .item li:before {
+        position: absolute;
+        content: "—";
+        width: 24px;
+        left: 0;
+        top: 0; }
 
 #prices {
   margin-top: 50px;

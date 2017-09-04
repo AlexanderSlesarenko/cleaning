@@ -930,15 +930,27 @@ body
     &.active
       opacity: 1
 #slider_text
+  height: 200px
   display: none
   @media (max-width: 920px)
     display: block
   &>.item
+    list-style-type: none
     opacity: 0
     position: absolute
     transition: all .3s ease
     &.active
       opacity: 1
+    li
+      position: relative
+      font-size: 20px
+      padding: 0 0 5px 24px
+      &:before
+        position: absolute
+        content: "\2014"
+        width: 24px
+        left: 0
+        top: 0
 #prices
   margin-top: 50px
   display: -webkit-flex
