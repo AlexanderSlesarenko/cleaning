@@ -29,7 +29,7 @@ var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
                 next = current + 1;
             }
             $('#slider_buttons .item[data-name="' + next + '"]').trigger('auto_click');
-        }, 2000);
+        }, 4000);
     } else {
         clearInterval(intervalID);
     }
