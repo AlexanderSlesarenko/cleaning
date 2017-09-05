@@ -360,8 +360,6 @@ body
           top: 50%
           -webkit-transform: rotate(90deg)
           transform: rotate(90deg)
-
-
   &.grey
     background-color: #f8f8f8
   .wrapper
@@ -456,6 +454,34 @@ body
     transition: border-color ease-in-out .3s, box-shadow ease-in-out .3s
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
     border-radius: 4px !important
+    &[type="checkbox"]
+      -webkit-box-shadow: none!important
+      box-shadow: none!important
+      border: 1px solid #d9d9d9!important
+      padding: 0
+      -webkit-appearance: none
+      background: #fff
+      border-image: -ms-linear-gradient(top, #fff, #fff)
+      -webkit-border-radius: 1px
+      border-radius: 1px
+      height: 13px
+      left: 1px
+      margin: 2px 8px 0 0
+      outline: 0
+      position: relative
+      top: 2px
+      width: 13px
+      outline: none !important
+      cursor: pointer
+      &:checked:after
+        background: url(../img/checkmark.png) no-repeat 0 0/21px
+        content: ""
+        display: block
+        height: 21px
+        left: -5px
+        position: relative
+        top: -6px
+        width: 21px
     &:hover
       border-color: rgba(0, 0, 0, 0.3)
     &:focus
@@ -1372,3 +1398,5 @@ button.toast-close-button
 
   #toast-container > div.rtl
     padding: 15px 50px 15px 15px
+label
+  cursor: pointer
