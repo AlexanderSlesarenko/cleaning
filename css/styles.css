@@ -402,6 +402,9 @@ body {
   @media (max-width: 569px) {
     .block.order .order_info {
       width: 280px; } }
+  @media (max-width: 363px) {
+    .block.order .order_info {
+      width: 250px; } }
   .block.order .order_info .pickers {
     display: inline-block; }
     .block.order .order_info .pickers .picker {
@@ -438,6 +441,12 @@ body {
         background: #fff;
         width: 150px;
         font-size: 15px; }
+        @media (max-width: 569px) {
+          .block.order .order_info .pickers .picker .value {
+            width: 178px; } }
+        @media (max-width: 363px) {
+          .block.order .order_info .pickers .picker .value {
+            width: 146px; } }
       .block.order .order_info .pickers .picker .plus {
         border-left: none;
         border-radius: 0 4px 4px 0; }
