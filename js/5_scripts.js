@@ -22,6 +22,11 @@ var CLOSETS_DICT = {
     4: '4 санузла',
     5: '5 санузлов'
 };
+var PRICES = {
+    'room': 100,
+    'closet': 100,
+
+}
 
 $(document).ready(function(){
     set_float_nav();
