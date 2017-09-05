@@ -4,6 +4,24 @@ window.onbeforeunload = function () {
 var nav_visible;
 var nav = $('#nav');
 var intervalID;
+var rooms = 0;
+var closets = 0;
+var ROOMS_DICT = {
+    0: 'Кол-во комнат',
+    1: '1-комнатная',
+    2: '2-комнатная',
+    3: '3-комнатная',
+    4: '4-комнатная',
+    5: '5-комнатная'
+};
+var CLOSETS_DICT = {
+    0: 'Кол-во санузлов',
+    1: '1 санузел',
+    2: '2 санузла',
+    3: '3 санузла',
+    4: '4 санузла',
+    5: '5 санузлов'
+};
 
 $(document).ready(function(){
     set_float_nav();
@@ -17,6 +35,7 @@ $(document).ready(function(){
     personnel_transform();
     set_mobile_menu();
     set_interval();
+    set_picker_click_handler();
 });
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
@@ -193,4 +212,54 @@ function set_float_nav() {
             nav.removeClass('visible');
         }
     });
+}
+function check_rooms_disabled(val) {
+    if (rooms === 5) {
+        $(".picker.rooms .plus").addClass('disabled');
+    } else {
+        $(".picker.rooms .plus").removeClass('disabled');
+    }
+    if (rooms === 0) {
+        $(".picker.rooms .minus").addClass('disabled');
+    } else {
+        $(".picker.rooms .minus").removeClass('disabled');
+    }
+}
+function check_closets_disabled(val) {
+    if (closets === 5) {
+        $(".picker.closets .plus").addClass('disabled');
+    } else {
+        $(".picker.closets .plus").removeClass('disabled');
+    }
+    if (closets === 0) {
+        $(".picker.closets .minus").addClass('disabled');
+    } else {
+        $(".picker.closets .minus").removeClass('disabled');
+    }
+}
+function set_picker_click_handler() {
+  $(".picker.rooms .plus").click(function() {
+    if (rooms === 5) return;
+    rooms ++;
+    $(".picker.rooms .value").text(ROOMS_DICT[rooms]);
+    check_rooms_disabled();
+  });
+  $(".picker.rooms .minus").click(function() {
+    if (rooms === 0) return;
+    rooms --;
+    $(".picker.rooms .value").text(ROOMS_DICT[rooms]);
+    check_rooms_disabled();
+  });
+  $(".picker.closets .plus").click(function() {
+    if (closets === 5) return;
+    closets ++;
+    $(".picker.closets .value").text(CLOSETS_DICT[closets]);
+    check_closets_disabled();
+  });
+  $(".picker.closets .minus").click(function() {
+    if (closets === 0) return;
+    closets --;
+    $(".picker.closets .value").text(CLOSETS_DICT[closets]);
+    check_closets_disabled();
+  });
 }
