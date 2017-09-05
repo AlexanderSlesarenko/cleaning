@@ -224,6 +224,7 @@ function check_rooms_disabled(val) {
     } else {
         $(".picker.rooms .minus").removeClass('disabled');
     }
+    check_total();
 }
 function check_closets_disabled(val) {
     if (closets === 5) {
@@ -235,6 +236,14 @@ function check_closets_disabled(val) {
         $(".picker.closets .minus").addClass('disabled');
     } else {
         $(".picker.closets .minus").removeClass('disabled');
+    }
+    check_total();
+}
+function check_total() {
+    if (closets === 0 || rooms === 0) {
+        $(".total .variable, .total .currency").addClass('hidden');
+    } else {
+        $(".total .variable, .total .currency").removeClass('hidden');
     }
 }
 function set_picker_click_handler() {

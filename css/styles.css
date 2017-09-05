@@ -471,7 +471,7 @@ body {
           background: #a6a6a6; }
   .block.order .order_info .extra_services {
     padding-bottom: 10px;
-    border-bottom: 1px solid #383838; }
+    border-bottom: 1px solid rgba(56, 56, 56, 0.63); }
     .block.order .order_info .extra_services .left {
       float: left;
       margin-right: 20px; }
@@ -482,6 +482,9 @@ body {
     margin-top: 10px; }
     .block.order .order_info .total * {
       font-family: "MuseoSansBold", Helvetica, Arial, sans-serif; }
+    .block.order .order_info .total .currency.hidden,
+    .block.order .order_info .total .variable.hidden {
+      display: none; }
 .block.grey {
   background-color: #f8f8f8; }
 .block .wrapper {

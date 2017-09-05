@@ -393,7 +393,7 @@ body
               background: #a6a6a6
       .extra_services
         padding-bottom: 10px
-        border-bottom: 1px solid #383838
+        border-bottom: 1px solid rgba(56, 56, 56, 0.63)
         .left
           float: left
           margin-right: 20px
@@ -403,6 +403,10 @@ body
         margin-top: 10px
         *
           font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
+        .currency,
+        .variable
+          &.hidden
+            display: none
   &.grey
     background-color: #f8f8f8
   .wrapper
