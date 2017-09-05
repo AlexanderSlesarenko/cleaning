@@ -441,6 +441,16 @@ body {
         top: 50%;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg); }
+  .block.order .extra_services .services_list {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #383838; }
+    .block.order .extra_services .services_list .left {
+      float: left;
+      margin-right: 20px; }
+  .block.order .extra_services .total {
+    margin-top: 10px; }
+    .block.order .extra_services .total * {
+      font-family: "MuseoSansBold", Helvetica, Arial, sans-serif; }
 .block.grey {
   background-color: #f8f8f8; }
 .block .wrapper {
