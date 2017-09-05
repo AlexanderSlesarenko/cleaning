@@ -799,6 +799,9 @@ body .accordion_header {
         margin-right: auto;
         margin-left: auto;
         margin-bottom: 10px; } }
+    @media (max-width: 363px) {
+      .bottom_form_wrapper .bottom_form input {
+        width: 220px; } }
     .bottom_form_wrapper .bottom_form button {
       height: 42px;
       font-size: 16px;
@@ -810,6 +813,9 @@ body .accordion_header {
           width: 280px;
           margin-right: auto;
           margin-left: auto; } }
+      @media (max-width: 363px) {
+        .bottom_form_wrapper .bottom_form button {
+          width: 250px; } }
 
 .block.footer {
   background-color: #383838; }
