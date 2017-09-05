@@ -316,66 +316,77 @@ body
   &.order
     .sub_header
       margin-top: 14px!important
-    .extra_services
+    .note
+      font-size: 18px
+      margin-top: 10px
       margin-left: auto
       width: 560px
       margin-right: auto
-      .note
-        font-size: 18px
-        margin-top: 10px
-      .picker
-        margin-top: 10px
-        display: flex
-        &.wc
-          margin-bottom: 10px
-        .minus,
-        .plus
-          border: 1px solid #d9d9d9
-          position: relative
-          background: #fff
-          min-width: 50px
-          cursor: pointer
-          height: 40px
-          &:after
-            content: ""
-            margin: -1px 0 0 -7px
-            position: absolute
-            background: #000
-            width: 14px
-            height: 2px
-            left: 50%
-            top: 50%
-        .minus
-          border-right: none
-          border-radius: 4px 0 0 4px
-        .value
-          line-height: 40px
-          height: 40px
-          border: 1px solid #d9d9d9
-          text-align: center
-          background: #fff
-          width: 150px
-          font-size: 15px
-        .plus
-          border-left: none
-          border-radius: 0 4px 4px 0
-          &:before
-            content: ""
-            margin: -1px 0 0 -7px
-            position: absolute
-            background: #000
-            width: 14px
-            height: 2px
-            left: 50%
-            top: 50%
-            -webkit-transform: rotate(90deg)
-            transform: rotate(90deg)
-      .services_list
+      @media (max-width: 569px)
+        width: unset
+    .order_info
+      margin-left: auto
+      width: 560px
+      margin-right: auto
+      @media (max-width: 569px)
+        width: 280px
+      .pickers
+        display: inline-block
+        .picker
+          margin-top: 10px
+          display: flex
+          &.wc
+            margin-bottom: 10px
+          .minus,
+          .plus
+            border: 1px solid #d9d9d9
+            position: relative
+            background: #fff
+            min-width: 50px
+            cursor: pointer
+            height: 40px
+            &:after
+              content: ""
+              margin: -1px 0 0 -7px
+              position: absolute
+              background: #000
+              width: 14px
+              height: 2px
+              left: 50%
+              top: 50%
+          .minus
+            border-right: none
+            border-radius: 4px 0 0 4px
+          .value
+            line-height: 40px
+            height: 40px
+            border: 1px solid #d9d9d9
+            text-align: center
+            background: #fff
+            width: 150px
+            font-size: 15px
+          .plus
+            border-left: none
+            border-radius: 0 4px 4px 0
+            &:before
+              content: ""
+              margin: -1px 0 0 -7px
+              position: absolute
+              background: #000
+              width: 14px
+              height: 2px
+              left: 50%
+              top: 50%
+              -webkit-transform: rotate(90deg)
+              transform: rotate(90deg)
+      .extra_services
         padding-bottom: 10px
         border-bottom: 1px solid #383838
         .left
           float: left
           margin-right: 20px
+          @media (max-width: 569px)
+            float: none
       .total
         margin-top: 10px
         *
@@ -675,6 +686,9 @@ body
   width: 560px
   margin-top: 20px
   margin-right: auto
+  @media (max-width: 569px)
+    text-align: center
+    width: unset
   .bottom_form
     display: -webkit-flex
     display: -ms-flexbox
@@ -682,28 +696,41 @@ body
     -webkit-justify-content: space-between
     -ms-flex-pack: justify
     justify-content: space-between
+    @media (max-width: 569px)
+      display: block
     input
-      //margin-right: 5px
-      @media (max-width: 652px)
+      @media (max-width: 569px)
         display: block
         width: 250px
         margin-right: auto
         margin-left: auto
         margin-bottom: 10px
-      @media (max-width: 363px)
-        width: 220px
+      //margin-right: 5px
+      //@media (max-width: 652px)
+      //  display: block
+      //  width: 250px
+      //  margin-right: auto
+      //  margin-left: auto
+      //  margin-bottom: 10px
+      //@media (max-width: 363px)
+      //  width: 220px
     button
       height: 42px
       font-size: 16px
       padding-left: 16px
       padding-right: 16px
-      @media (max-width: 652px)
+      @media (max-width: 569px)
         display: block
         width: 280px
         margin-right: auto
         margin-left: auto
-      @media (max-width: 363px)
-        width: 250px
+      //@media (max-width: 652px)
+      //  display: block
+      //  width: 280px
+      //  margin-right: auto
+      //  margin-left: auto
+      //@media (max-width: 363px)
+      //  width: 250px
 .block
   &.footer
     background-color: #383838
