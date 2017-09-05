@@ -27,7 +27,7 @@ var PRICES = {
     'room': 100,
     'closet': 100,
 
-}
+};
 
 $(document).ready(function(){
     set_float_nav();
@@ -42,6 +42,7 @@ $(document).ready(function(){
     set_mobile_menu();
     set_interval();
     set_picker_click_handler();
+    set_extra_services_click_handler();
 });
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
@@ -279,4 +280,9 @@ function check_total() {
         $(".total .variable").text(total);
         $(".total .variable, .total .currency").removeClass('hidden');
     }
+}
+function set_extra_services_click_handler() {
+  $(".extra_services label input, .extra_services label span").click(function() {
+    console.log('click')
+  });
 }
