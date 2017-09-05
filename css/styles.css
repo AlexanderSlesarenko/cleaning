@@ -318,7 +318,7 @@ body {
             color: #fff; } }
         @media (max-width: 400px) {
           #top_block .top_form_wrapper .top_form .region {
-            width: 80%; } }
+            width: 100%; } }
       @media (max-width: 700px) {
         #top_block .top_form_wrapper .top_form {
           background-color: transparent;
@@ -387,14 +387,14 @@ body {
 .block.order .sub_header {
   margin-top: 14px !important; }
 .block.order .note {
-  font-size: 18px;
   margin-top: 10px;
   margin-left: auto;
   width: 560px;
   margin-right: auto; }
   @media (max-width: 569px) {
     .block.order .note {
-      width: unset; } }
+      width: 96%;
+      text-align: center; } }
 .block.order .order_info {
   margin-left: auto;
   width: 560px;
