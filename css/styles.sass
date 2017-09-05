@@ -316,50 +316,60 @@ body
   &.order
     .sub_header
       margin-top: 14px!important
-    .picker
-      display: flex
-      .minus,
-      .plus
-        border: 1px solid #d9d9d9
-        position: relative
-        background: #fff
-        min-width: 50px
-        cursor: pointer
-        height: 40px
-        &:after
-          content: ""
-          margin: -1px 0 0 -7px
-          position: absolute
-          background: #000
-          width: 14px
-          height: 2px
-          left: 50%
-          top: 50%
-      .minus
-        border-right: none
-        border-radius: 4px 0 0 4px
-      .value
-        line-height: 40px
-        height: 40px
-        border: 1px solid #d9d9d9
-        text-align: center
-        background: #fff
-        width: 150px
-        font-size: 15px
-      .plus
-        border-left: none
-        border-radius: 0 4px 4px 0
-        &:before
-          content: ""
-          margin: -1px 0 0 -7px
-          position: absolute
-          background: #000
-          width: 14px
-          height: 2px
-          left: 50%
-          top: 50%
-          -webkit-transform: rotate(90deg)
-          transform: rotate(90deg)
+    .extra_services
+      margin-left: auto
+      width: 560px
+      margin-right: auto
+      .note
+        font-size: 18px
+        margin-top: 10px
+      .picker
+        margin-top: 10px
+        display: flex
+        &.wc
+          margin-bottom: 10px
+        .minus,
+        .plus
+          border: 1px solid #d9d9d9
+          position: relative
+          background: #fff
+          min-width: 50px
+          cursor: pointer
+          height: 40px
+          &:after
+            content: ""
+            margin: -1px 0 0 -7px
+            position: absolute
+            background: #000
+            width: 14px
+            height: 2px
+            left: 50%
+            top: 50%
+        .minus
+          border-right: none
+          border-radius: 4px 0 0 4px
+        .value
+          line-height: 40px
+          height: 40px
+          border: 1px solid #d9d9d9
+          text-align: center
+          background: #fff
+          width: 150px
+          font-size: 15px
+        .plus
+          border-left: none
+          border-radius: 0 4px 4px 0
+          &:before
+            content: ""
+            margin: -1px 0 0 -7px
+            position: absolute
+            background: #000
+            width: 14px
+            height: 2px
+            left: 50%
+            top: 50%
+            -webkit-transform: rotate(90deg)
+            transform: rotate(90deg)
   &.grey
     background-color: #f8f8f8
   .wrapper
@@ -650,11 +660,20 @@ body
     background: #485eac
 
 .bottom_form_wrapper
-  text-align: center
+  //text-align: center
+  margin-left: auto
+  width: 560px
   margin-top: 20px
+  margin-right: auto
   .bottom_form
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
     input
-      margin-right: 5px
+      //margin-right: 5px
       @media (max-width: 652px)
         display: block
         width: 250px
@@ -664,7 +683,7 @@ body
       @media (max-width: 363px)
         width: 220px
     button
-      height: 40px
+      height: 42px
       font-size: 16px
       padding-left: 16px
       padding-right: 16px
