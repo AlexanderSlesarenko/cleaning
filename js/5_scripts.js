@@ -6,6 +6,7 @@ var nav = $('#nav');
 var intervalID;
 var rooms = 0;
 var closets = 0;
+var total = 0;
 var ROOMS_DICT = {
     0: 'Кол-во комнат',
     1: '1-комнатная',
@@ -244,13 +245,6 @@ function check_closets_disabled(val) {
     }
     check_total();
 }
-function check_total() {
-    if (closets === 0 || rooms === 0) {
-        $(".total .variable, .total .currency").addClass('hidden');
-    } else {
-        $(".total .variable, .total .currency").removeClass('hidden');
-    }
-}
 function set_picker_click_handler() {
   $(".picker.rooms .plus").click(function() {
     if (rooms === 5) return;
@@ -276,4 +270,13 @@ function set_picker_click_handler() {
     $(".picker.closets .value").text(CLOSETS_DICT[closets]);
     check_closets_disabled();
   });
+}
+function check_total() {
+    if (closets === 0 || rooms === 0) {
+        $(".total .variable, .total .currency").addClass('hidden');
+    } else {
+        total = PRICES['room'] * rooms + PRICES['closet'] * (closets - 1);
+        $(".total .variable").text(total);
+        $(".total .variable, .total .currency").removeClass('hidden');
+    }
 }
