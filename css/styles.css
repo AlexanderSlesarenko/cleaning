@@ -910,7 +910,6 @@ body .accordion_header {
     background-size: contain;
     background-image: url(../img/logo_black.svg); }
   .side-nav .options {
-    margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px; }
     .side-nav .options .option {
