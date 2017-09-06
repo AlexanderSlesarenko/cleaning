@@ -8,6 +8,8 @@ var rooms = 0;
 var closets = 0;
 var total = 0;
 var extra_services_sum = 0;
+var extra_services_list =[];
+var extra_info;
 var ROOMS_DICT = {
     0: 'Кол-во комнат',
     1: '1-комнатная',
@@ -221,11 +223,15 @@ function set_form_submit_listener() {
         }
 
 		$.post(
-            'https://script.google.com/macros/s/AKfycbw9iZeumDlu_sCtBHci8hp4Zf6S2EbK87ncis8J6t7fTWH4fYQ/exec',
-			{
-				name : name,
-				phone : phone
-			}, function(){}
+		    'https://script.google.com/macros/s/AKfycbxUQmB4xywU_aqtsjEwX2Y6TXTgg8gLQ78ecU1vWlQ5Wu7Frgk/exec',
+            {
+                'имя': name,
+                'телефон': phone,
+                'комнаты': extra_info ? rooms : undefined,
+                'санузлы': extra_info ? closets : undefined,
+                'доп. услуги': (extra_info && extra_services_list.length > 0) ? extra_services_list : undefined,
+                'сумма': extra_info ? total : undefined
+            }, function(){}
 		);
         $(that).find('input[name="name"]').val('');
         $(that).find('input[name="phone"]').val('');
@@ -302,18 +308,22 @@ function set_picker_click_handler() {
 }
 function check_total() {
     if (closets === 0 || rooms === 0) {
+        extra_info = false;
         $(".total .variable, .total .currency").addClass('hidden');
     } else {
-        get_extra_services_sum();
+        extra_info = true;
+        get_extra_services();
         total = PRICES['room'] * rooms + PRICES['closet'] * (closets - 1) + extra_services_sum;
         $(".total .variable").text(total);
         $(".total .variable, .total .currency").removeClass('hidden');
     }
 }
-function get_extra_services_sum() {
+function get_extra_services() {
     extra_services_sum = 0;
+    extra_services_list = [];
       $(".extra_services label input:checked").each(function (index, item) {
           extra_services_sum = extra_services_sum + PRICES[$(item).siblings('span').text()];
+          extra_services_list.push($(item).siblings('span').text());
       });
 }
 function set_extra_services_click_handler() {
