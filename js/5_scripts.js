@@ -160,7 +160,18 @@ function set_scroll_down() {
         scrollTop: $(".block.second").offset().top - 60
     }, 500);
   });
-  $("#nav button, #prices button").click(function() {
+  $("#nav button").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".block.order").offset().top - 60
+    }, 500);
+  });
+  $("#prices button").click(function() {
+      rooms = $(this).data('name');
+      closets = 1;
+      $(".picker.rooms .value").text(ROOMS_DICT[rooms]);
+      $(".picker.closets .value").text(CLOSETS_DICT[closets]);
+      check_rooms_disabled();
+      check_closets_disabled();
     $('html, body').animate({
         scrollTop: $(".block.order").offset().top - 60
     }, 500);
