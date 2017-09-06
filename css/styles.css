@@ -36,6 +36,9 @@ body {
   width: 100%;
   top: -70px;
   opacity: 0.2; }
+  @media (max-width: 625px) {
+    #nav {
+      height: 40px; } }
   #nav.visible {
     opacity: 1;
     top: 0;
@@ -49,6 +52,12 @@ body {
     margin-top: 17px;
     background-repeat: no-repeat;
     background-size: contain; }
+    @media (max-width: 625px) {
+      #nav .logo {
+        height: 22px;
+        width: 116px;
+        margin-left: 10px;
+        margin-top: 12px; } }
   #nav .menu {
     margin-right: 20px;
     float: right; }
@@ -128,7 +137,9 @@ body {
       top: 50%; }
     @media (max-width: 625px) {
       #nav .menu_mobile_icon {
-        display: inline-block; } }
+        display: inline-block;
+        height: 40px;
+        margin-top: 1px; } }
     #nav .menu_mobile_icon:before, #nav .menu_mobile_icon:after {
       background-color: #222; }
   #nav * {
