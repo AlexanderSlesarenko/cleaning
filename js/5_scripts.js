@@ -7,6 +7,7 @@ var intervalID;
 var rooms = 0;
 var closets = 0;
 var total = 0;
+var extra_services_sum = 0;
 var ROOMS_DICT = {
     0: 'Кол-во комнат',
     1: '1-комнатная',
@@ -26,7 +27,16 @@ var CLOSETS_DICT = {
 var PRICES = {
     'room': 100,
     'closet': 100,
-
+    'внутри холодильника': 100,
+    'внутри духовки': 100,
+    'мытьё посуды': 100,
+    'внутри микроволновки': 100,
+    'смена белья': 100,
+    'глажка белья': 100,
+    'уборка лотка питомца': 100,
+    'внутри кухонных шкафов': 100,
+    'уборка в гардеробной': 100,
+    'мытьё вытяжки': 100
 };
 
 $(document).ready(function(){
@@ -282,7 +292,12 @@ function check_total() {
     }
 }
 function set_extra_services_click_handler() {
-  $(".extra_services label input, .extra_services label span").click(function() {
-    console.log('click')
+  $(".extra_services label input").click(function() {
+      extra_services_sum = 0;
+      $(".extra_services label input:checked").each(function (index, item) {
+          extra_services_sum = extra_services_sum + PRICES[$(item).siblings('span').text()];
+      });
+      console.log(extra_services_sum);
   });
+
 }
