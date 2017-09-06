@@ -76,6 +76,7 @@
       margin-bottom: 1px
       border-radius: 6px !important
       padding: 5px 15px
+      padding-top: 6px
 @font-face
   font-family: "MuseoSansMedium"
   src: url("../fonts/MuseoSansMedium.eot")
@@ -614,12 +615,13 @@ body
     top: 0
 #telegram_link_chat,
 #vk_link_chat,
-#whatsapp_link_chat
+#whatsapp_link_chat,
+#viber_link_chat
   text-decoration: none
   position: relative
   display: inline-block
   height: 40px
-  width: 160px
+  width: 134px
   vertical-align: middle
   transition: background .3s ease
   border-radius: 100px
@@ -636,6 +638,20 @@ body
     margin-right: 10px
     height: 24px
     width: 24px
+#viber_link_chat
+  text-align: left
+  img
+    margin-left: 25px
+    margin-right: 15px
+#whatsapp_link_chat
+  text-align: left
+  img
+    margin-left: 15px
+    margin-right: 2px
+#telegram_link_chat,
+#vk_link_chat
+  @media (max-width: 643px)
+    margin-bottom: 10px
 
 #telegram_link_chat
   background: #2ca5e0
@@ -649,6 +665,10 @@ body
   background: #26b33d
   &:hover
     background: #2bd045
+#viber_link_chat
+  background: #665cac
+  &:hover
+    background: #957ede
 
 #vk_link,
 #instagram_link,
@@ -764,8 +784,12 @@ body
       .messengers
         border-bottom: 1px solid hsla(0,0%,100%,.1)
         padding-bottom: 30px
+        @media (max-width: 643px)
+          width: 280px
+          padding-bottom: 20px
         @media (max-width: 640px)
           padding-bottom: 10px
+
       .info
         margin-top: 10px
         .left
