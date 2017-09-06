@@ -27,16 +27,16 @@ var CLOSETS_DICT = {
 var PRICES = {
     'room': 100,
     'closet': 100,
-    'внутри холодильника': 100,
-    'внутри духовки': 100,
-    'мытьё посуды': 100,
-    'внутри микроволновки': 100,
-    'смена белья': 100,
-    'глажка белья': 100,
-    'уборка лотка питомца': 100,
-    'внутри кухонных шкафов': 100,
-    'уборка в гардеробной': 100,
-    'мытьё вытяжки': 100
+    'внутри холодильника': 10,
+    'внутри духовки': 10,
+    'мытьё посуды': 10,
+    'внутри микроволновки': 10,
+    'смена белья': 10,
+    'глажка белья': 10,
+    'уборка лотка питомца': 10,
+    'внутри кухонных шкафов': 10,
+    'уборка в гардеробной': 10,
+    'мытьё вытяжки': 10
 };
 
 $(document).ready(function(){
@@ -286,18 +286,20 @@ function check_total() {
     if (closets === 0 || rooms === 0) {
         $(".total .variable, .total .currency").addClass('hidden');
     } else {
-        total = PRICES['room'] * rooms + PRICES['closet'] * (closets - 1);
+        get_extra_services_sum();
+        total = PRICES['room'] * rooms + PRICES['closet'] * (closets - 1) + extra_services_sum;
         $(".total .variable").text(total);
         $(".total .variable, .total .currency").removeClass('hidden');
     }
 }
-function set_extra_services_click_handler() {
-  $(".extra_services label input").click(function() {
-      extra_services_sum = 0;
+function get_extra_services_sum() {
+    extra_services_sum = 0;
       $(".extra_services label input:checked").each(function (index, item) {
           extra_services_sum = extra_services_sum + PRICES[$(item).siblings('span').text()];
       });
-      console.log(extra_services_sum);
+}
+function set_extra_services_click_handler() {
+  $(".extra_services label input").click(function() {
+      check_total();
   });
-
 }
