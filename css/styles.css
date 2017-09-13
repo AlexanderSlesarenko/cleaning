@@ -1039,24 +1039,28 @@ body .accordion_header {
     #benefits .top,
     #benefits .bottom {
       display: block; } }
+  #benefits .top .item:first-of-type,
+  #benefits .bottom .item:first-of-type {
+    margin-left: 125px; }
+  #benefits .top .item:last-of-type,
+  #benefits .bottom .item:last-of-type {
+    margin-right: 125px; }
+    @media (max-width: 953px) {
+      #benefits .top .item:last-of-type,
+      #benefits .bottom .item:last-of-type {
+        margin-bottom: 0; } }
 #benefits .bottom {
-  margin-top: 20px; }
+  margin-top: 50px; }
   @media (max-width: 953px) {
     #benefits .bottom {
       margin-top: 0; } }
-  #benefits .bottom .item:first-of-type {
-    margin-left: 160px; }
-  #benefits .bottom .item:last-of-type {
-    margin-right: 160px; }
-    @media (max-width: 953px) {
-      #benefits .bottom .item:last-of-type {
-        margin-bottom: 0; } }
 #benefits .item {
-  height: 280px;
-  width: 300px;
+  height: 300px;
+  width: 320px;
   display: inline-block;
   vertical-align: top;
   position: relative;
+  transition: all 0.3s ease;
   background: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px; }
@@ -1106,7 +1110,7 @@ body .accordion_header {
     max-width: 270px;
     text-align: center;
     margin: 0 auto;
-    font-size: 21px;
+    font-size: 28px;
     line-height: 26px;
     margin-bottom: 10px;
     margin-top: 10px; }
@@ -1122,7 +1126,7 @@ body .accordion_header {
         margin-bottom: 5px; } }
   #benefits .item .content .descr {
     padding: 0 10px;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 26px;
     max-width: 320px;
     margin: 0 auto;
