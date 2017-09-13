@@ -1379,11 +1379,9 @@ body .accordion_header {
       text-align: center;
       display: block; } }
   #personnel .item {
-    height: 335px;
+    height: 300px;
     width: 300px;
     text-align: center;
-    border-radius: 6px;
-    border: 1px solid #d9d9d9;
     transition: all 0.8s ease;
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
@@ -1399,19 +1397,10 @@ body .accordion_header {
     @media (max-width: 570px) {
       #personnel .item {
         width: 300px; } }
-    #personnel .item .header {
-      font-size: 14px;
-      font-family: "MuseoSansBold", Helvetica, Arial, sans-serif;
-      line-height: 40px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      border-bottom: 1px solid #d9d9d9;
-      background: rgba(247, 247, 247, 0.5);
-      border-radius: 6px 6px 0 0; }
     #personnel .item img {
-      height: 180px;
-      border-radius: 100px;
-      margin-top: 10px; }
+      border: 1px solid #d9d9d9;
+      border-radius: 6px;
+      width: 100%; }
     #personnel .item.active {
       -webkit-transform: scale(1);
       transform: scale(1);
