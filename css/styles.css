@@ -1408,14 +1408,6 @@ body .accordion_header {
       height: 180px;
       border-radius: 100px;
       margin-top: 10px; }
-    #personnel .item .descr {
-      padding: 0 20px;
-      display: table; }
-      #personnel .item .descr .descr_header {
-        font-family: "MuseoSansBold", Helvetica, Arial, sans-serif;
-        margin-bottom: 7px; }
-      #personnel .item .descr .descr_content {
-        font-size: 15px; }
     #personnel .item.active {
       -webkit-transform: scale(1);
       transform: scale(1);
