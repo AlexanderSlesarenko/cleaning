@@ -42,7 +42,7 @@ body {
   #nav.visible {
     opacity: 1;
     top: 0;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08); }
   #nav .logo {
     background-image: url(../img/logo_black.svg);
     display: inline-block;
@@ -1062,7 +1062,7 @@ body .accordion_header {
   position: relative;
   transition: all 0.3s ease;
   background: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08);
   border-radius: 6px; }
   @media (max-width: 953px) {
     #benefits .item {
@@ -1107,7 +1107,6 @@ body .accordion_header {
       display: inline-block; } }
   #benefits .item .content .header {
     font-family: "MuseoSansBold", Helvetica, Arial, sans-serif;
-    max-width: 270px;
     text-align: center;
     margin: 0 auto;
     font-size: 28px;
@@ -1227,7 +1226,9 @@ body .accordion_header {
 #slider {
   position: relative;
   height: 625px;
-  margin-top: 22px; }
+  margin-top: 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.32); }
   @media (max-width: 969px) {
     #slider {
       width: calc(100% - 10px);
@@ -1382,6 +1383,8 @@ body .accordion_header {
     height: 300px;
     width: 300px;
     text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08);
     transition: all 0.8s ease;
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
@@ -1398,7 +1401,6 @@ body .accordion_header {
       #personnel .item {
         width: 300px; } }
     #personnel .item img {
-      border: 1px solid #d9d9d9;
       border-radius: 6px;
       width: 100%; }
     #personnel .item.active {

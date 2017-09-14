@@ -120,7 +120,7 @@ body
   &.visible
     opacity: 1
     top: 0
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,.3)
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08)
   .logo
     background-image: url(../img/logo_black.svg)
     +logo()
@@ -933,7 +933,8 @@ body
     position: relative
     transition: all .3s ease
     background: #fff
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2)
+    //box-shadow: 0 2px 6px 0 rgba(0,0,0,.2)
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08)
     border-radius: 6px
     @media (max-width: 953px)
       line-height: 190px
@@ -972,7 +973,6 @@ body
         display: inline-block
       .header
         font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
-        max-width: 270px
         text-align: center
         margin: 0 auto
         font-size: 28px
@@ -1080,6 +1080,8 @@ body
   position: relative
   height: 625px
   margin-top: 22px
+  border-radius: 8px
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.32)
   @media (max-width: 969px)
     width: calc(100% - 10px)
     height: 63.75vw
@@ -1217,7 +1219,8 @@ body
     height: 300px
     width: 300px
     text-align: center
-    //border-radius: 6px
+    border-radius: 6px
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08)
     @media (max-width: 710px)
       display: block!important
       width: 55%
@@ -1237,7 +1240,6 @@ body
     //  background: hsla(0,0%,97%,.5)
     //  border-radius: 6px 6px 0 0
     img
-      border: 1px solid #d9d9d9
       border-radius: 6px
       width: 100%
     transition: all .8s ease
