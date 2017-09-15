@@ -1088,6 +1088,9 @@ body .accordion_header {
   #benefits .item .image_wrapper {
     margin-top: 19px;
     text-align: center; }
+    #benefits .item .image_wrapper img {
+      height: 72px;
+      width: 72px; }
     @media (max-width: 953px) {
       #benefits .item .image_wrapper {
         margin-right: 5px;
@@ -1097,6 +1100,8 @@ body .accordion_header {
         float: left;
         line-height: 190px; }
         #benefits .item .image_wrapper img {
+          height: 72px;
+          width: 72px;
           vertical-align: middle; } }
     @media (max-width: 500px) {
       #benefits .item .image_wrapper {
