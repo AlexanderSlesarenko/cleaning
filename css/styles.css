@@ -178,6 +178,12 @@ body {
       height: 57px;
       width: 196px;
       margin-top: 6px; }
+      #top_block .header .logo .cleaning_comp {
+        color: #ffffff;
+        font-size: 14px;
+        position: absolute;
+        bottom: -3px;
+        font-family: "MuseoSansRegular", Helvetica, Arial, sans-serif; }
     #top_block .header .menu {
       margin-right: 20px;
       float: right; }
