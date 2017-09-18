@@ -909,24 +909,21 @@ body
 #benefits
   .top,
   .bottom
-    display: -webkit-flex
-    display: -ms-flexbox
-    display: flex
-    -webkit-justify-content: space-between
-    -ms-flex-pack: justify
-    justify-content: space-between
-    @media (max-width: 953px)
-      display: block
+    text-align: center
     .item
       &:first-of-type
-        margin-left: 125px
+        margin-right: 25px
+        @media (max-width: 828px)
+          margin-right: 10px
       &:last-of-type
-        margin-right: 125px
-        @media (max-width: 953px)
-          margin-bottom: 0
+        margin-left: 25px
+        @media (max-width: 828px)
+          margin-left: 10px
   .bottom
     margin-top: 50px
-    @media (max-width: 953px)
+    @media (max-width: 828px)
+      margin-top: 20px
+    @media (max-width: 735px)
       margin-top: 0
   .item
     height: 290px
@@ -936,10 +933,9 @@ body
     position: relative
     transition: all .3s ease
     background: #fff
-    //box-shadow: 0 2px 6px 0 rgba(0,0,0,.2)
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08)
     border-radius: 6px
-    @media (max-width: 953px)
+    @media (max-width: 735px)
       line-height: 190px
       height: 190px
       width: 500px
@@ -962,8 +958,7 @@ body
       img
         height: 72px
         width: 72px
-      @media (max-width: 953px)
-        margin-right: 5px
+      @media (max-width: 735px)
         margin-left: 30px
         margin-top: 0
         display: inline-block
@@ -974,7 +969,7 @@ body
       @media (max-width: 500px)
         display: none
     .content
-      @media (max-width: 953px)
+      @media (max-width: 735px)
         vertical-align: middle
         display: inline-block
       .header
@@ -985,7 +980,7 @@ body
         line-height: 26px
         margin-bottom: 15px
         margin-top: 15px
-        @media (max-width: 953px)
+        @media (max-width: 735px)
           margin-top: 0
         @media (max-width: 450px)
           font-size: 21px
@@ -999,13 +994,6 @@ body
         max-width: 320px
         margin: 0 auto
         text-align: center
-        .middle_screen
-          display: none
-          @media (max-width: 953px)
-            display: block
-        .large_screen
-          @media (max-width: 953px)
-            display: none
 
 #slider_buttons
   margin-top: 30px
