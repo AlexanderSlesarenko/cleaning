@@ -1084,8 +1084,8 @@ body .accordion_header {
       text-align: center; } }
   @media (max-width: 450px) {
     #benefits .item {
-      line-height: 180px;
-      height: 180px; } }
+      line-height: 165px;
+      height: 165px; } }
   #benefits .item .image_wrapper {
     margin-top: 30px;
     text-align: center; }
@@ -1133,6 +1133,9 @@ body .accordion_header {
     max-width: 320px;
     margin: 0 auto;
     text-align: center; }
+    @media (max-width: 735px) {
+      #benefits .item .content .descr {
+        padding: 0 5px; } }
 
 #slider_buttons {
   margin-top: 30px;
