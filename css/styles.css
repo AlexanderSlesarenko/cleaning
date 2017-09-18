@@ -697,6 +697,17 @@ body .accordion_header {
       @media (max-width: 750px) {
         .accordion_content div:after {
           height: 10px; } }
+  .accordion_content div ul {
+    margin: 0; }
+    .accordion_content div ul li {
+      line-height: 25px;
+      font-family: "MuseoSansReqular", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      max-width: 620px; }
+      @media (max-width: 750px) {
+        .accordion_content div ul li {
+          line-height: 22px;
+          max-width: 95%; } }
 
 @keyframes _1SPxwonwfe0SdBCvZcLsRX {
   0% {
