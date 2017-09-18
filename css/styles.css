@@ -174,7 +174,10 @@ body {
       margin-left: 20px;
       margin-top: 17px;
       background-repeat: no-repeat;
-      background-size: contain; }
+      background-size: contain;
+      height: 57px;
+      width: 196px;
+      margin-top: 6px; }
     #top_block .header .menu {
       margin-right: 20px;
       float: right; }
@@ -1100,8 +1103,6 @@ body .accordion_header {
         float: left;
         line-height: 190px; }
         #benefits .item .image_wrapper img {
-          height: 72px;
-          width: 72px;
           vertical-align: middle; } }
     @media (max-width: 500px) {
       #benefits .item .image_wrapper {
