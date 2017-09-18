@@ -52,7 +52,7 @@ $(document).ready(function(){
     set_scroll_down();
     set_accordion();
     set_slider_buttons_click_listener();
-    personnel_transform();
+    // personnel_transform();
     set_mobile_menu();
     set_interval();
     set_picker_click_handler();
