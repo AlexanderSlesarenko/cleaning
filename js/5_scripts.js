@@ -27,7 +27,13 @@ var CLOSETS_DICT = {
     5: '5 санузлов'
 };
 var PRICES = {
-    'room': 100,
+    'room': {
+        1: 1590,
+        2: 1990,
+        3: 2490,
+        4: 3190,
+        5: 3890
+    },
     'closet': 400,
     'внутри холодильника': 600,
     'внутри духовки': 500,
@@ -315,7 +321,7 @@ function check_total() {
     } else {
         extra_info = true;
         get_extra_services();
-        total = PRICES['room'] * rooms + PRICES['closet'] * (closets - 1) + extra_services_sum;
+        total = PRICES['room'][rooms] + PRICES['closet'] * (closets - 1) + extra_services_sum;
         $(".total .variable").text(total);
         $(".total .variable, .total .currency").removeClass('hidden');
     }
