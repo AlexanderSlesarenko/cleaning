@@ -46,7 +46,7 @@ var PRICES = {
     'внутри кухонных шкафов': 400,
     'уборка в гардеробной': 500,
     'мытьё вытяжки': 300,
-    'мытьё окон (с вн. стороны)': 200 // за штуку
+    'мытьё окон (с вн. ст.)': 200 // за штуку
 };
 
 $(document).ready(function(){
@@ -63,6 +63,7 @@ $(document).ready(function(){
     set_interval();
     set_picker_click_handler();
     set_extra_services_click_handler();
+    set_select_click_handler();
 });
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
@@ -330,12 +331,34 @@ function get_extra_services() {
     extra_services_sum = 0;
     extra_services_list = [];
       $(".extra_services label input:checked").each(function (index, item) {
-          extra_services_sum = extra_services_sum + PRICES[$(item).siblings('span').text()];
-          extra_services_list.push($(item).siblings('span').text());
+          var cls = $(item).attr('class');
+          var multiply;
+          if (cls) {
+              multiply = parseInt($('div.' + cls + ' > .dropdown .selected').text());
+          }
+          extra_services_sum = extra_services_sum + PRICES[$(item).siblings('span').text()] * (multiply ? multiply : 1);
+          if (multiply) {
+              extra_services_list.push($(item).siblings('span').text() + '(' + multiply + ')');
+          } else {
+              extra_services_list.push($(item).siblings('span').text());
+          }
       });
 }
 function set_extra_services_click_handler() {
   $(".extra_services label input").click(function() {
+      var cls = $(this).attr('class');
+      if (cls) {
+          if ($(this).is(":checked")) {
+              $('div.' + cls + ' > .dropdown').css('display', 'inline-block');
+          } else {
+              $('div.' + cls + ' > .dropdown').css('display', 'none');
+          }
+      }
       check_total();
   });
+}
+function set_select_click_handler() {
+    $( "select" ).change(function(val) {
+      check_total();
+    });
 }

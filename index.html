@@ -342,15 +342,39 @@
                         <div><label><input type="checkbox"/><span>мытьё посуды</span></label></div>
                         <div><label><input type="checkbox"/><span>внутри микроволновки</span></label></div>
                         <div><label><input type="checkbox"/><span>смена белья</span></label></div>
-                        <div><label><input type="checkbox"/><span>уборка на балконе</span></label></div>
+                        <div class="balcony"><label><input type="checkbox" class="balcony"/><span>уборка на балконе</span></label>
+                            <select class="dropdown">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="right">
                         <div><label><input type="checkbox"/><span>глажка белья</span></label></div>
-                        <div><label><input type="checkbox"/><span>уборка лотка питомца</span></label></div>
+                        <div class="lotok"><label><input type="checkbox" class="lotok"/><span>уборка лотка питомца</span></label>
+                            <select class="dropdown">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
                         <div><label><input type="checkbox"/><span>внутри кухонных шкафов</span></label></div>
                         <div><label><input type="checkbox"/><span>уборка в гардеробной</span></label></div>
                         <div><label><input type="checkbox"/><span>мытьё вытяжки</span></label></div>
-                        <div><label><input type="checkbox"/><span>мытьё окон (с вн. стороны)</span></label></div>
+                        <div class="windows"><label><input type="checkbox" class="windows"/><span>мытьё окон (с вн. ст.)</span></label>
+                            <select class="dropdown">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="total">
@@ -429,7 +453,8 @@
     <script src="js/2_jquery.maskedinput.min.js"></script>
     <script src="js/3_toastr.min.js"></script>
     <script src="js/4_materialize.js"></script>
-    <script src="js/5_scripts.js"></script>
+    <script src="js/5_jquery.easydropdown.min.js"></script>
+    <script src="js/6_scripts.js"></script>
     <!--<script src="bundle/bundle.min.js"></script>-->
 </body>
 </html>
