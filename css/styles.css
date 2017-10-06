@@ -1322,6 +1322,103 @@ body .accordion_header {
   text-align: center;
   width: 80%; }
 
+#eco {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 6px; }
+  @media (max-width: 948px) {
+    #eco {
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; } }
+  @media (max-width: 530px) {
+    #eco {
+      padding: 0; } }
+  #eco .image_wrapper {
+    width: 37%; }
+    #eco .image_wrapper img {
+      width: 100%;
+      border-radius: 6px; }
+      #eco .image_wrapper img[alt="synergetic_small"] {
+        display: none; }
+        @media (max-width: 803px) {
+          #eco .image_wrapper img[alt="synergetic_small"] {
+            display: block; } }
+        @media (max-width: 530px) {
+          #eco .image_wrapper img[alt="synergetic_small"] {
+            border-radius: 0; } }
+      @media (max-width: 803px) {
+        #eco .image_wrapper img[alt="synergetic"] {
+          display: none; } }
+  #eco .descr {
+    float: right;
+    width: 56%; }
+    @media (max-width: 948px) {
+      #eco .descr {
+        width: 58%; } }
+    @media (max-width: 870px) {
+      #eco .descr {
+        width: 55%; } }
+    @media (max-width: 803px) {
+      #eco .descr {
+        float: none;
+        margin-top: 10px; } }
+    #eco .descr .header {
+      margin: 0;
+      font-family: "MuseoSansBold", Helvetica, Arial, sans-serif;
+      line-height: 40px;
+      letter-spacing: 0;
+      font-size: 40px; }
+      @media (max-width: 870px) {
+        #eco .descr .header {
+          font-size: 30px; } }
+      @media (max-width: 803px) {
+        #eco .descr .header {
+          text-align: center; } }
+      @media (max-width: 750px) {
+        #eco .descr .header {
+          font-size: 25px;
+          margin-bottom: 5px;
+          line-height: 25px; } }
+    #eco .descr .content {
+      padding-top: 15px;
+      width: 90%;
+      font-size: 20px;
+      line-height: 30px; }
+      @media (max-width: 870px) {
+        #eco .descr .content {
+          font-size: 19px;
+          padding-top: 0; }
+          #eco .descr .content p {
+            margin-top: 10px;
+            margin-bottom: 0; } }
+      @media (max-width: 803px) {
+        #eco .descr .content {
+          width: 100%; } }
+      @media (max-width: 750px) {
+        #eco .descr .content {
+          font-size: 16px;
+          line-height: 22px; }
+          #eco .descr .content p {
+            margin-top: 0; } }
+      @media (max-width: 530px) {
+        #eco .descr .content {
+          width: 80%;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 10px; } }
+      @media (max-width: 657px) {
+        #eco .descr .content p {
+          display: inline; } }
+  #eco .image_wrapper, #eco .descr {
+    display: inline-block; }
+    @media (max-width: 803px) {
+      #eco .image_wrapper, #eco .descr {
+        display: block;
+        width: 100%; } }
+
 #prices {
   margin-top: 50px;
   display: -webkit-flex;
@@ -1444,6 +1541,9 @@ body .accordion_header {
 
 .block.faq > .wrapper {
   padding-top: 30px; }
+
+.block.eco > .wrapper {
+  padding-bottom: 0; }
 
 .toast-title {
   font-weight: bold; }
