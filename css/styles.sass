@@ -72,7 +72,12 @@
       a
         +link()
     &.navigate
+      padding: 0 5px
+      font-size: 13px
+      text-transform: uppercase
+      font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif
       margin-right: 50px
+      cursor: pointer
     button
       padding: 3px 7px
     //  font-size: 14px
@@ -124,7 +129,7 @@ body
   -moz-transition: 0.3s
   -o-transition: 0.3s
   &.visible
-    opacity: 0.9
+    opacity: 0.965
     top: 0
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08)
     &:hover
@@ -141,7 +146,9 @@ body
       display: none
     +menu()
     .menu_item
-      line-height: 41px
+      line-height: 42px
+      &.button
+        line-height: 40px
       &.option
         a
           color: #8c8c8c

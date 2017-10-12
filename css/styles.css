@@ -41,7 +41,7 @@ body {
   -moz-transition: 0.3s;
   -o-transition: 0.3s; }
   #nav.visible {
-    opacity: 0.9;
+    opacity: 0.965;
     top: 0;
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08); }
     #nav.visible:hover {
@@ -85,11 +85,18 @@ body {
         #nav .menu .menu_item.option a {
           text-decoration: none; }
       #nav .menu .menu_item.navigate {
-        margin-right: 50px; }
+        padding: 0 5px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
+        margin-right: 50px;
+        cursor: pointer; }
       #nav .menu .menu_item button {
         padding: 3px 7px; }
     #nav .menu .menu_item {
-      line-height: 41px; }
+      line-height: 42px; }
+      #nav .menu .menu_item.button {
+        line-height: 40px; }
       #nav .menu .menu_item.option a {
         color: #8c8c8c;
         transition: color 0.3s;
@@ -215,7 +222,12 @@ body {
           #top_block .header .menu .menu_item.option a {
             text-decoration: none; }
         #top_block .header .menu .menu_item.navigate {
-          margin-right: 50px; }
+          padding: 0 5px;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
+          margin-right: 50px;
+          cursor: pointer; }
         #top_block .header .menu .menu_item button {
           padding: 3px 7px; }
       #top_block .header .menu .menu_item.option:last-of-type {
