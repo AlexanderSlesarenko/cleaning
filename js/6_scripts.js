@@ -81,13 +81,6 @@ var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
         clearInterval(intervalID);
     }
 });
-function get_top_height() {
-    if ($(window).width() > 625) {
-        return 60;
-    } else {
-        return 40;
-    }
-}
 function isElementInViewport (el) {
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
@@ -175,12 +168,12 @@ function set_slider_buttons_click_listener() {
 function set_scroll_down() {
   $(".top_pointer_wrapper").click(function() {
     $('html, body').animate({
-        scrollTop: $(".block.second").offset().top - get_top_height()
+        scrollTop: $(".block.second").offset().top - 40
     }, 500);
   });
   $("#nav button").click(function() {
     $('html, body').animate({
-        scrollTop: $(".block.order").offset().top - get_top_height()
+        scrollTop: $(".block.order").offset().top - 40
     }, 500);
   });
   $("#prices button").click(function() {
@@ -191,13 +184,13 @@ function set_scroll_down() {
       check_rooms_disabled();
       check_closets_disabled();
     $('html, body').animate({
-        scrollTop: $(".block.order").offset().top - get_top_height()
+        scrollTop: $(".block.order").offset().top - 40
     }, 500);
   });
   $("#slide-out button").click(function() {
     $(".menu_mobile_icon").sideNav('hide');
     $('html, body').animate({
-        scrollTop: $(".block.order").offset().top - get_top_height()
+        scrollTop: $(".block.order").offset().top - 40
     }, 500);
   });
 }
