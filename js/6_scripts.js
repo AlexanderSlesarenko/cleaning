@@ -193,6 +193,36 @@ function set_scroll_down() {
         scrollTop: $(".block.order").offset().top - 40
     }, 500);
   });
+  $('[href="#block_benefits"]').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#block_benefits").offset().top - 40
+    }, 500);
+  });
+  $('[href="#block_how_we_works"]').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#block_how_we_works").offset().top - 40
+    }, 500);
+  });
+  $('[href="#block_eco"]').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#block_eco").offset().top - 40
+    }, 500);
+  });
+  $('[href="#block_prices"]').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#block_prices").offset().top - 40
+    }, 500);
+  });
+  $('[href="#block_faq"]').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#block_faq").offset().top - 40
+    }, 500);
+  });
 }
 function set_buttons_blur() {
   $("button").click(function(event) {
