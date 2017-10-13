@@ -72,7 +72,7 @@ body {
       #nav .menu .menu_item.option {
         margin-right: 20px; }
         #nav .menu .menu_item.option.phone {
-          margin-left: 30px; }
+          margin-left: 100px; }
           #nav .menu .menu_item.option.phone * {
             color: #222; }
           #nav .menu .menu_item.option.phone a {
@@ -85,6 +85,8 @@ body {
         #nav .menu .menu_item.option a {
           text-decoration: none; }
       #nav .menu .menu_item.navigate {
+        color: #000;
+        text-decoration: none;
         padding: 0 15px;
         font-size: 13px;
         text-transform: uppercase;
@@ -214,7 +216,7 @@ body {
         #top_block .header .menu .menu_item.option {
           margin-right: 20px; }
           #top_block .header .menu .menu_item.option.phone {
-            margin-left: 30px; }
+            margin-left: 100px; }
             #top_block .header .menu .menu_item.option.phone * {
               color: #222; }
             #top_block .header .menu .menu_item.option.phone a {
@@ -227,6 +229,8 @@ body {
           #top_block .header .menu .menu_item.option a {
             text-decoration: none; }
         #top_block .header .menu .menu_item.navigate {
+          color: #000;
+          text-decoration: none;
           padding: 0 15px;
           font-size: 13px;
           text-transform: uppercase;
