@@ -85,18 +85,22 @@ body {
         #nav .menu .menu_item.option a {
           text-decoration: none; }
       #nav .menu .menu_item.navigate {
-        padding: 0 5px;
+        padding: 0 15px;
         font-size: 13px;
         text-transform: uppercase;
         font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
-        margin-right: 50px;
-        cursor: pointer; }
+        cursor: pointer;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -ms-transition: background-color 0.3s;
+        -o-transition: background-color time;
+        transition: background-color time; }
+        #nav .menu .menu_item.navigate:hover {
+          background-color: rgba(255, 193, 41, 0.69); }
       #nav .menu .menu_item button {
         padding: 3px 7px; }
     #nav .menu .menu_item {
-      line-height: 42px; }
-      #nav .menu .menu_item.button {
-        line-height: 40px; }
+      line-height: 40px; }
       #nav .menu .menu_item.option a {
         color: #8c8c8c;
         transition: color 0.3s;
@@ -222,12 +226,18 @@ body {
           #top_block .header .menu .menu_item.option a {
             text-decoration: none; }
         #top_block .header .menu .menu_item.navigate {
-          padding: 0 5px;
+          padding: 0 15px;
           font-size: 13px;
           text-transform: uppercase;
           font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
-          margin-right: 50px;
-          cursor: pointer; }
+          cursor: pointer;
+          -webkit-transition: background-color 0.3s;
+          -moz-transition: background-color 0.3s;
+          -ms-transition: background-color 0.3s;
+          -o-transition: background-color time;
+          transition: background-color time; }
+          #top_block .header .menu .menu_item.navigate:hover {
+            background-color: rgba(255, 193, 41, 0.69); }
         #top_block .header .menu .menu_item button {
           padding: 3px 7px; }
       #top_block .header .menu .menu_item.option:last-of-type {
