@@ -164,6 +164,9 @@ body
     +menu()
     .menu_item
       line-height: 40px
+      &.navigate
+        @media (max-width: 1133px)
+          display: none
       &.option
         a
           color: #8c8c8c
@@ -173,6 +176,9 @@ body
           -o-transition: color 0.3s
           &:hover
             color: #222
+        &.phone
+          @media (max-width: 1244px)
+            margin-left: 20px
   .menu_mobile_icon
     +menu_mobile_icon()
     @media (max-width: 625px)
@@ -225,6 +231,8 @@ body
       .menu_item
         &.navigate
           color: #fff
+          @media (max-width: 1033px)
+            display: none
           &:hover
             background-color: rgba(255, 193, 41, 0.48)
         &.option
@@ -235,6 +243,8 @@ body
           a
             color: #ffffff
           &.phone
+            @media (max-width: 1120px)
+              margin-left: 20px
             *
               color: #ffc228
     .menu_mobile_icon
