@@ -171,7 +171,8 @@ function set_scroll_down() {
         scrollTop: $(".block.second").offset().top - 40
     }, 500);
   });
-  $("#nav button").click(function() {
+  $('#nav [href="#block_order"]').click(function() {
+    event.preventDefault();
     $('html, body').animate({
         scrollTop: $(".block.order").offset().top - 40
     }, 500);

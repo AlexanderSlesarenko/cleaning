@@ -100,8 +100,21 @@ body {
         transition: background-color 0.3s; }
         #nav .menu .menu_item.navigate:hover {
           background-color: rgba(255, 193, 41, 0.69); }
-      #nav .menu .menu_item button {
-        padding: 3px 7px; }
+      #nav .menu .menu_item.button_wrapper a {
+        background-color: #ffc228;
+        color: #000;
+        text-decoration: none;
+        font-size: 13px;
+        border-radius: 6px !important;
+        padding: 5px 15px;
+        padding-top: 6px;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -ms-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        #nav .menu .menu_item.button_wrapper a:hover {
+          background-color: #f5bc00; }
     #nav .menu .menu_item {
       line-height: 40px; }
       #nav .menu .menu_item.option a {
@@ -244,8 +257,21 @@ body {
           transition: background-color 0.3s; }
           #top_block .header .menu .menu_item.navigate:hover {
             background-color: rgba(255, 193, 41, 0.69); }
-        #top_block .header .menu .menu_item button {
-          padding: 3px 7px; }
+        #top_block .header .menu .menu_item.button_wrapper a {
+          background-color: #ffc228;
+          color: #000;
+          text-decoration: none;
+          font-size: 13px;
+          border-radius: 6px !important;
+          padding: 5px 15px;
+          padding-top: 6px;
+          -webkit-transition: background-color 0.3s;
+          -moz-transition: background-color 0.3s;
+          -ms-transition: background-color 0.3s;
+          -o-transition: background-color 0.3s;
+          transition: background-color 0.3s; }
+          #top_block .header .menu .menu_item.button_wrapper a:hover {
+            background-color: #f5bc00; }
       #top_block .header .menu .menu_item.option:last-of-type {
         margin-right: 0; }
       #top_block .header .menu .menu_item.option * {
