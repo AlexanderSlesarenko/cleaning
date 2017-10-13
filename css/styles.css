@@ -89,12 +89,13 @@ body {
         font-size: 13px;
         text-transform: uppercase;
         font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
+        margin-right: -5px;
         cursor: pointer;
         -webkit-transition: background-color 0.3s;
         -moz-transition: background-color 0.3s;
         -ms-transition: background-color 0.3s;
-        -o-transition: background-color time;
-        transition: background-color time; }
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
         #nav .menu .menu_item.navigate:hover {
           background-color: rgba(255, 193, 41, 0.69); }
       #nav .menu .menu_item button {
@@ -230,12 +231,13 @@ body {
           font-size: 13px;
           text-transform: uppercase;
           font-family: "MuseoSansMedium", Helvetica, Arial, sans-serif;
+          margin-right: -5px;
           cursor: pointer;
           -webkit-transition: background-color 0.3s;
           -moz-transition: background-color 0.3s;
           -ms-transition: background-color 0.3s;
-          -o-transition: background-color time;
-          transition: background-color time; }
+          -o-transition: background-color 0.3s;
+          transition: background-color 0.3s; }
           #top_block .header .menu .menu_item.navigate:hover {
             background-color: rgba(255, 193, 41, 0.69); }
         #top_block .header .menu .menu_item button {
