@@ -272,6 +272,10 @@ body {
           transition: background-color 0.3s; }
           #top_block .header .menu .menu_item.button_wrapper a:hover {
             background-color: #f5bc00; }
+      #top_block .header .menu .menu_item.navigate {
+        color: #fff; }
+        #top_block .header .menu .menu_item.navigate:hover {
+          background-color: rgba(255, 193, 41, 0.48); }
       #top_block .header .menu .menu_item.option:last-of-type {
         margin-right: 0; }
       #top_block .header .menu .menu_item.option * {
