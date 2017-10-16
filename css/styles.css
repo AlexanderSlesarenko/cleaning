@@ -1459,9 +1459,13 @@ body .accordion_header {
           font-size: 25px;
           margin-bottom: 5px;
           line-height: 25px; } }
+      @media (max-width: 803px) {
+        #eco .descr .header br {
+          display: none; } }
+      @media (max-width: 495px) {
+        #eco .descr .header br {
+          display: block; } }
     #eco .descr .content {
-      padding-top: 15px;
-      width: 90%;
       font-size: 20px;
       line-height: 30px; }
       @media (max-width: 870px) {

@@ -1262,9 +1262,13 @@ body
         font-size: 25px
         margin-bottom: 5px
         line-height: 25px
+      br
+        @media (max-width: 803px)
+          display: none
+        @media (max-width: 495px)
+          display: block
     .content
-      padding-top: 15px
-      width: 90%
+      //width: 90%
       font-size: 20px
       line-height: 30px
       @media (max-width: 870px)
