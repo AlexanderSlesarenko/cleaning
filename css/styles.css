@@ -1008,6 +1008,9 @@ body .accordion_header {
         display: inline-block;
         float: left;
         line-height: 42px; }
+        @media (max-width: 505px) {
+          .block.footer .wrapper .info .left {
+            line-height: 20px; } }
         @media (max-width: 340px) {
           .block.footer .wrapper .info .left {
             font-size: 12px;
@@ -1017,6 +1020,8 @@ body .accordion_header {
           line-height: 30px;
           font-size: 13px;
           text-decoration: none; }
+        .block.footer .wrapper .info .left .phone_wrapper {
+          display: inline-block; }
       .block.footer .wrapper .info .right {
         display: inline-block; }
     .block.footer .wrapper .legal_info {
