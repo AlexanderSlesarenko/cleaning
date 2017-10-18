@@ -21,8 +21,8 @@
       content="уборка квартир, генеральная уборка, клининговая компания, Обнинск, стоимость, недорого"/>
    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
 
-   <!--<link href="css/styles.css" rel="stylesheet">-->
-   <link href="bundle/bundle.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+   <!--<link href="bundle/bundle.css" rel="stylesheet">-->
 </head>
 <body>
     <!-- Yandex.Metrika counter -->
@@ -397,22 +397,28 @@
         </div>
     </div>
     <div id="block_order" class="block grey order">
+        <div class="back_image">
+            <video alt="cleaning_video" preload="auto" autoplay="" loop="">
+                <source src="img/cleaning_video.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="wrapper">
-            <h1 class="header">
-                Закажите уборку сейчас
-            </h1>
-            <div class="sub_header center">
-                Мы работаем так, чтобы вы захотите порекомендовать нас своим друзьям
-            </div>
-            <div class="bottom_form_wrapper">
-                <form class="bottom_form">
-                    <input type="text" class="" name="name" placeholder="Ваше имя" />
-                    <input type="text" class="" name="phone" placeholder="Телефон"/>
-                    <button type="submit">Заказать уборку</button>
-                </form>
-            </div>
-            <div class="note">вы также можете указать детали заказа:</div>
-            <div class="order_info">
+            <div class="sub_wrapper">
+                <h1 class="header">
+                    Закажите уборку сейчас
+                </h1>
+                <div class="sub_header center">
+                    Мы работаем так, чтобы вы захотите порекомендовать нас своим друзьям
+                </div>
+                <div class="bottom_form_wrapper">
+                    <form class="bottom_form">
+                        <input type="text" class="" name="name" placeholder="Ваше имя" />
+                        <input type="text" class="" name="phone" placeholder="Телефон"/>
+                        <button type="submit">Заказать уборку</button>
+                    </form>
+                </div>
+                <div class="note">вы также можете указать детали заказа:</div>
+                <div class="order_info">
                 <div class="pickers">
                     <div class="picker rooms">
                         <span class="minus disabled"></span>
@@ -472,6 +478,7 @@
                     <span class="variable hidden"></span>
                     <span class="currency hidden">руб.</span>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -539,12 +546,12 @@
             </div>
         </div>
     </ul>
-    <!--<script src="js/1_jquery.min.js"></script>-->
-    <!--<script src="js/2_jquery.maskedinput.min.js"></script>-->
-    <!--<script src="js/3_toastr.min.js"></script>-->
-    <!--<script src="js/4_materialize.js"></script>-->
-    <!--<script src="js/5_jquery.easydropdown.min.js"></script>-->
-    <!--<script src="js/6_scripts.js"></script>-->
-    <script src="bundle/bundle.min.js"></script>
+    <script src="js/1_jquery.min.js"></script>
+    <script src="js/2_jquery.maskedinput.min.js"></script>
+    <script src="js/3_toastr.min.js"></script>
+    <script src="js/4_materialize.js"></script>
+    <script src="js/5_jquery.easydropdown.min.js"></script>
+    <script src="js/6_scripts.js"></script>
+    <!--<script src="bundle/bundle.min.js"></script>-->
 </body>
 </html>

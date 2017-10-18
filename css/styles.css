@@ -598,7 +598,7 @@ body {
     .block .wrapper {
       padding-top: 40px;
       padding-bottom: 30px; } }
-  .block .wrapper > .header {
+  .block .wrapper > .header, .block .wrapper > .sub_wrapper > .header {
     font-family: "MuseoSansBold", Helvetica, Arial, sans-serif;
     text-align: center;
     line-height: 40px;
@@ -607,10 +607,10 @@ body {
     margin: 0;
     padding: 0 20px; }
     @media (max-width: 750px) {
-      .block .wrapper > .header {
+      .block .wrapper > .header, .block .wrapper > .sub_wrapper > .header {
         font-size: 25px;
         line-height: 25px; } }
-  .block .wrapper > .sub_header {
+  .block .wrapper > .sub_header, .block .wrapper > .sub_wrapper > .sub_header {
     margin-top: 22px;
     padding: 0 80px;
     text-align: center;
@@ -618,24 +618,24 @@ body {
     letter-spacing: 0;
     line-height: 28px; }
     @media (max-width: 933px) {
-      .block .wrapper > .sub_header {
+      .block .wrapper > .sub_header, .block .wrapper > .sub_wrapper > .sub_header {
         text-align: left; }
-        .block .wrapper > .sub_header.center {
+        .block .wrapper > .sub_header.center, .block .wrapper > .sub_wrapper > .sub_header.center {
           text-align: center; } }
     @media (max-width: 750px) {
-      .block .wrapper > .sub_header {
+      .block .wrapper > .sub_header, .block .wrapper > .sub_wrapper > .sub_header {
         font-size: 17px;
         line-height: 24px; } }
     @media (max-width: 450px) {
-      .block .wrapper > .sub_header {
+      .block .wrapper > .sub_header, .block .wrapper > .sub_wrapper > .sub_header {
         padding: 0 30px; } }
-    .block .wrapper > .sub_header.unlimited {
+    .block .wrapper > .sub_header.unlimited, .block .wrapper > .sub_wrapper > .sub_header.unlimited {
       padding: 0; }
       @media (max-width: 933px) {
-        .block .wrapper > .sub_header.unlimited {
+        .block .wrapper > .sub_header.unlimited, .block .wrapper > .sub_wrapper > .sub_header.unlimited {
           padding: 0 80px; } }
       @media (max-width: 450px) {
-        .block .wrapper > .sub_header.unlimited {
+        .block .wrapper > .sub_header.unlimited, .block .wrapper > .sub_wrapper > .sub_header.unlimited {
           padding: 0 30px; } }
 
 body button {
@@ -1112,6 +1112,30 @@ body .accordion_header {
   position: fixed;
   top: 0;
   z-index: 998; }
+
+#block_order {
+  position: relative; }
+  #block_order .wrapper {
+    position: relative; }
+    #block_order .wrapper .sub_wrapper {
+      opacity: 0.9;
+      background-color: white; }
+  #block_order .back_image {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute; }
+    #block_order .back_image video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 #sidenav-overlay {
   position: fixed;

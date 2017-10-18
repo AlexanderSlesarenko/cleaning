@@ -490,7 +490,7 @@ body
     @media (max-width: 750px)
       padding-top: 40px
       padding-bottom: 30px
-    & > .header
+    & > .header, & > .sub_wrapper > .header
       font-family: "MuseoSansBold", Helvetica, Arial, sans-serif
       text-align: center
       line-height: 40px
@@ -501,7 +501,7 @@ body
       @media (max-width: 750px)
         font-size: 25px
         line-height: 25px
-    & > .sub_header
+    & > .sub_header, & > .sub_wrapper > .sub_header
       margin-top: 22px
       padding: 0 80px
       text-align: center
@@ -965,6 +965,29 @@ body
   position: fixed
   top: 0
   z-index: 998
+#block_order
+  position: relative
+  .wrapper
+    position: relative
+    .sub_wrapper
+      opacity: 0.9
+      background-color: white
+  .back_image
+    top: 0
+    bottom: 0
+    height: 100%
+    width: 100%
+    overflow: hidden
+    position: absolute
+    video
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
 #sidenav-overlay
   position: fixed
   top: 0
