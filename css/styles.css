@@ -1118,8 +1118,16 @@ body .accordion_header {
   #block_order .wrapper {
     position: relative; }
     #block_order .wrapper .sub_wrapper {
-      opacity: 0.9;
+      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      width: 87%;
+      margin-left: auto;
+      padding: 25px 0px;
+      margin-right: auto;
+      opacity: 0.94;
       background-color: white; }
+      #block_order .wrapper .sub_wrapper .sub_header {
+        padding: 0; }
   #block_order .back_image {
     top: 0;
     bottom: 0;
