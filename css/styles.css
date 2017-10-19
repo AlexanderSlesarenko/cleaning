@@ -1126,8 +1126,22 @@ body .accordion_header {
       margin-right: auto;
       opacity: 0.94;
       background-color: white; }
+      @media (max-width: 899px) {
+        #block_order .wrapper .sub_wrapper {
+          width: 100%;
+          opacity: 1;
+          background-color: #f8f8f8;
+          border-radius: 0;
+          box-shadow: none;
+          padding: 0; } }
       #block_order .wrapper .sub_wrapper .sub_header {
         padding: 0; }
+        @media (max-width: 899px) {
+          #block_order .wrapper .sub_wrapper .sub_header {
+            padding: 0 80px; } }
+        @media (max-width: 450px) {
+          #block_order .wrapper .sub_wrapper .sub_header {
+            padding: 0 30px; } }
   #block_order .back_image {
     top: 0;
     bottom: 0;
@@ -1144,6 +1158,9 @@ body .accordion_header {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+      @media (max-width: 899px) {
+        #block_order .back_image video {
+          display: none; } }
 
 #sidenav-overlay {
   position: fixed;

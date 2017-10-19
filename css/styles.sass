@@ -978,8 +978,19 @@ body
       margin-right: auto
       opacity: 0.94
       background-color: white
+      @media (max-width: 899px)
+        width: 100%
+        opacity: 1
+        background-color: #f8f8f8
+        border-radius: 0
+        box-shadow: none
+        padding: 0
       .sub_header
         padding: 0
+        @media (max-width: 899px)
+          padding: 0 80px
+        @media (max-width: 450px)
+          padding: 0 30px
   .back_image
     top: 0
     bottom: 0
@@ -996,6 +1007,8 @@ body
       top: 50%
       left: 50%
       transform: translate(-50%,-50%)
+      @media (max-width: 899px)
+        display: none
 #sidenav-overlay
   position: fixed
   top: 0
