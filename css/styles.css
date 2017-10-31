@@ -1396,6 +1396,42 @@ body .accordion_header {
     width: 100%; }
     #slider img.active {
       opacity: 1; }
+  #slider .left, #slider .right {
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.2s ease;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    border-radius: 4px;
+    margin-top: -40px;
+    cursor: pointer;
+    height: 80px;
+    width: 40px;
+    z-index: 20;
+    top: 91.9%; }
+    #slider .left:before, #slider .right:before {
+      border: 2px solid #000;
+      margin: -8px 0 0 -12px;
+      border-bottom: none;
+      position: absolute;
+      border-left: none;
+      height: 16px;
+      width: 16px;
+      content: "";
+      left: 50%;
+      top: 50%; }
+    #slider .left:hover, #slider .right:hover {
+      border-color: #222; }
+  #slider .left {
+    left: 10px; }
+    #slider .left:before {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      margin-left: -4px; }
+  #slider .right {
+    right: 10px; }
+    #slider .right:before {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
 
 #slider_text {
   height: 200px;

@@ -64,6 +64,7 @@ $(document).ready(function(){
     set_picker_click_handler();
     set_extra_services_click_handler();
     set_select_click_handler();
+    set_how_we_work_left_right_buttons_listener();
 });
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
@@ -76,7 +77,7 @@ var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
                 next = current + 1;
             }
             $('#slider_buttons .item[data-name="' + next + '"]').trigger('auto_click');
-        }, 2500);
+        }, 5500);
     } else {
         clearInterval(intervalID);
     }
@@ -105,6 +106,69 @@ function onVisibilityChange(el, callback) {
 }
 function set_interval() {
     $(window).on('DOMContentLoaded load resize scroll', handler);
+}
+function set_slider_buttons_click_listener() {
+  function click_callback(that) {
+    if ($(that).hasClass('active')) return;
+    $('#slider_buttons .item.active').removeClass('active');
+    $(that).addClass('active');
+    $('#slider img.active').removeClass('active');
+    $('#slider_text > .item').removeClass('active');
+    $('#slider img[name="' + $(that).data('name') + '"]').addClass('active');
+    $('#slider_text > .item[data-name="' + $(that).data('name') + '"]').addClass('active');
+  }
+  $("#slider_buttons .first .item:first-of-type, #slider img:first-of-type, #slider_text > .item:first-of-type").addClass('active');
+  $("#slider_buttons .item").on('click', function() {
+      clearInterval(intervalID);
+      click_callback(this);
+  });
+  $("#slider_buttons .item").on('auto_click', function() {
+      click_callback(this);
+  });
+}
+function set_how_we_work_left_right_buttons_listener() {
+    $("#slider .right").on('click', function() {
+        clearInterval(intervalID);
+        var _next;
+        var _current = $("#slider_buttons .item.active").data('name');
+        if (_current === 4) {
+            _next = 1;
+        } else {
+            _next = _current + 1;
+        }
+        $('#slider_buttons .item[data-name="' + _next + '"]').trigger('auto_click');
+        intervalID = setInterval(function() {
+            var next;
+            var current = $("#slider_buttons .item.active").data('name');
+            if (current === 4) {
+                next = 1;
+            } else {
+                next = current + 1;
+            }
+            $('#slider_buttons .item[data-name="' + next + '"]').trigger('auto_click');
+        }, 5500);
+    });
+    $("#slider .left").on('click', function() {
+        clearInterval(intervalID);
+        var _next;
+        var _current = $("#slider_buttons .item.active").data('name');
+        if (_current === 1) {
+            _next = 4;
+        } else {
+            _next = _current - 1;
+        }
+        $('#slider_buttons .item[data-name="' + _next + '"]').trigger('auto_click');
+        intervalID = setInterval(function() {
+            var next;
+            var current = $("#slider_buttons .item.active").data('name');
+            if (current === 4) {
+                next = 1;
+            } else {
+                next = current + 1;
+            }
+            $('#slider_buttons .item[data-name="' + next + '"]').trigger('auto_click');
+        }, 5500);
+    });
 }
 function set_mobile_menu() {
     $(".menu_mobile_icon").sideNav({
@@ -145,25 +209,6 @@ function set_accordion() {
         }
       }
     }
-}
-function set_slider_buttons_click_listener() {
-  function click_callback(that) {
-    if ($(that).hasClass('active')) return;
-    $('#slider_buttons .item.active').removeClass('active');
-    $(that).addClass('active');
-    $('#slider img.active').removeClass('active');
-    $('#slider_text > .item').removeClass('active');
-    $('#slider img[name="' + $(that).data('name') + '"]').addClass('active');
-    $('#slider_text > .item[data-name="' + $(that).data('name') + '"]').addClass('active');
-  }
-  $("#slider_buttons .first .item:first-of-type, #slider img:first-of-type, #slider_text > .item:first-of-type").addClass('active');
-  $("#slider_buttons .item").on('click', function() {
-      clearInterval(intervalID);
-      click_callback(this);
-  });
-  $("#slider_buttons .item").on('auto_click', function() {
-      click_callback(this);
-  });
 }
 function set_scroll_down() {
   $(".top_pointer_wrapper").click(function() {
