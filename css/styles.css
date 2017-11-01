@@ -1373,6 +1373,67 @@ body .accordion_header {
       #slider_buttons .item {
         font-size: 13px; } }
 
+#examples {
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.32);
+  border-radius: 8px;
+  position: relative;
+  height: 500px;
+  background-color: #1e1e1e;
+  margin-top: 25px; }
+  @media (max-width: 969px) {
+    #examples {
+      width: calc(100% - 10px);
+      height: 51.4vw;
+      margin-left: auto;
+      margin-right: auto; } }
+  #examples img {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 100%; }
+    #examples img.active {
+      opacity: 1; }
+  #examples .left, #examples .right {
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.2s ease;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    border-radius: 4px;
+    margin-top: -40px;
+    cursor: pointer;
+    height: 80px;
+    width: 40px;
+    z-index: 20;
+    top: 50%; }
+    #examples .left:before, #examples .right:before {
+      border: 2px solid #000;
+      margin: -8px 0 0 -12px;
+      border-bottom: none;
+      position: absolute;
+      border-left: none;
+      height: 16px;
+      width: 16px;
+      content: "";
+      left: 50%;
+      top: 50%; }
+    #examples .left:hover, #examples .right:hover {
+      border-color: #222; }
+  #examples .left {
+    left: 10px; }
+    #examples .left:before {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      margin-left: -4px; }
+  #examples .right {
+    right: 10px; }
+    #examples .right:before {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
 #slider {
   position: relative;
   height: 625px;
@@ -1711,7 +1772,12 @@ body .accordion_header {
   padding-top: 30px; }
 
 .block.eco > .wrapper {
-  padding-bottom: 0; }
+  padding-top: 65px;
+  padding-bottom: 65px; }
+  @media (max-width: 750px) {
+    .block.eco > .wrapper {
+      padding-top: 40px;
+      padding-bottom: 30px; } }
 
 .toast-title {
   font-weight: bold; }

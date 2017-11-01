@@ -65,6 +65,7 @@ $(document).ready(function(){
     set_extra_services_click_handler();
     set_select_click_handler();
     set_how_we_work_left_right_buttons_listener();
+    set_examples();
 });
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
@@ -429,5 +430,36 @@ function set_extra_services_click_handler() {
 function set_select_click_handler() {
     $( "select" ).change(function(val) {
       check_total();
+    });
+}
+function set_examples() {
+    function set_examples_interval() {
+        interval = setInterval(function() {
+            current ++;
+            if (current > images_count) current = 1;
+            $('#examples img.active').removeClass('active');
+            $("#examples img[name=" + current + "]").addClass('active');
+        }, 4000);
+    }
+    $("#examples img:first-of-type").addClass('active');
+    var current = 1;
+    var images_count = $("#examples img").length;
+    var interval;
+    set_examples_interval();
+    $("#examples .right").on('click', function() {
+        clearInterval(interval);
+        current ++;
+        if (current > images_count) current = 1;
+        $('#examples img.active').removeClass('active');
+        $("#examples img[name=" + current + "]").addClass('active');
+        set_examples_interval();
+    });
+    $("#examples .left").on('click', function() {
+        clearInterval(interval);
+        current --;
+        if (current === 0) current = images_count;
+        $('#examples img.active').removeClass('active');
+        $("#examples img[name=" + current + "]").addClass('active');
+        set_examples_interval();
     });
 }
