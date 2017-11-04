@@ -1380,10 +1380,11 @@ body .accordion_header {
   height: 500px;
   background-color: #1e1e1e;
   margin-top: 25px; }
-  @media (max-width: 969px) {
+  @media (max-width: 1000px) {
     #examples {
-      width: calc(100% - 10px);
-      height: 51.4vw;
+      border-radius: 0;
+      width: calc(100vw);
+      height: calc(50vw);
       margin-left: auto;
       margin-right: auto; } }
   #examples img {
@@ -1395,6 +1396,9 @@ body .accordion_header {
     right: 0;
     margin: 0 auto;
     height: 100%; }
+    @media (max-width: 1000px) {
+      #examples img {
+        border-radius: 0; } }
     #examples img.active {
       opacity: 1; }
   #examples .left, #examples .right {
@@ -1409,6 +1413,10 @@ body .accordion_header {
     width: 40px;
     z-index: 20;
     top: 50%; }
+    @media (max-width: 1000px) {
+      #examples .left, #examples .right {
+        height: 40px;
+        width: 20px; } }
     #examples .left:before, #examples .right:before {
       border: 2px solid #000;
       margin: -8px 0 0 -12px;
@@ -1767,6 +1775,9 @@ body .accordion_header {
       #personnel .item:nth-of-type(2) {
         margin-left: 5px;
         display: inline-block; } }
+
+#block_examples > .wrapper {
+  max-width: 1000px; }
 
 .block.faq > .wrapper {
   padding-top: 30px; }

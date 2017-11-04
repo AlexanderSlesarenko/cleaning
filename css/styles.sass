@@ -1199,9 +1199,10 @@ body
   height: 500px
   background-color: #1e1e1e
   margin-top: 25px
-  @media (max-width: 969px)
-    width: calc(100% - 10px)
-    height: 51.4vw
+  @media (max-width: 1000px)
+    border-radius: 0
+    width: calc(100vw)
+    height: calc(50vw)
     margin-left: auto
     margin-right: auto
   img
@@ -1213,6 +1214,8 @@ body
     right: 0
     margin: 0 auto
     height: 100%
+    @media (max-width: 1000px)
+      border-radius: 0
     &.active
       opacity: 1
   .left, .right
@@ -1227,6 +1230,9 @@ body
     width: 40px
     z-index: 20
     top: 50%
+    @media (max-width: 1000px)
+      height: 40px
+      width: 20px
     &:before
       border: 2px solid #000
       margin: -8px 0 0 -12px
@@ -1558,6 +1564,8 @@ body
       &:nth-of-type(2)
         margin-left: 5px
         display: inline-block
+#block_examples > .wrapper
+  max-width: 1000px
 .block.faq > .wrapper
   padding-top: 30px
 .block.eco > .wrapper
