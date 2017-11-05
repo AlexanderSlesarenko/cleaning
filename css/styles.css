@@ -893,8 +893,7 @@ body .accordion_header {
     transition: opacity 0.3s ease;
     background-size: contain;
     position: absolute;
-    opacity: 0.8;
-    content: ""; }
+    opacity: 0.8; }
 
 #vk_link img {
   left: 8px;
