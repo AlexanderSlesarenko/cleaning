@@ -240,10 +240,10 @@ function set_scroll_down() {
         scrollTop: $(".block.order").offset().top - 40
     }, 500);
   });
-  $('[href="#block_benefits"]').click(function (event) {
+  $('[href="#block_examples"]').click(function (event) {
     event.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#block_benefits").offset().top - 40
+        scrollTop: $("#block_examples").offset().top - 40
     }, 500);
   });
   $('[href="#block_how_we_works"]').click(function (event) {
