@@ -2163,10 +2163,13 @@ label {
 
 .floating-contacts-wrapper {
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   bottom: 40px;
   right: 40px;
   padding: 10px; }
+  @media (max-width: 996px) {
+    .floating-contacts-wrapper {
+      display: none; } }
   .floating-contacts-wrapper .top {
     height: 50px;
     width: 50px;
@@ -2177,7 +2180,8 @@ label {
     transition: all 0.3s ease;
     visibility: visible;
     opacity: 1;
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.18); }
     .floating-contacts-wrapper .top:before {
       content: "";
       width: 0;

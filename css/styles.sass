@@ -1998,8 +1998,10 @@ label
 .dropdown li.active
   font-weight: 700
 .floating-contacts-wrapper
+  @media (max-width: 996px)
+    display: none
   position: fixed
-  z-index: 1
+  z-index: 1000
   bottom: 40px
   right: 40px
   padding: 10px
@@ -2014,6 +2016,7 @@ label
     visibility: visible
     opacity: 1
     cursor: pointer
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.18)
     &:before
       content: ""
       width: 0
