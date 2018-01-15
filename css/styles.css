@@ -2275,4 +2275,9 @@ label {
     .floating-contacts-wrapper:hover ul li {
       margin-top: 10px; }
 
+.ui-dialog .ui-widget-header {
+  display: none; }
+.ui-dialog .ui-dialog-buttonpane {
+  border: none; }
+
 /*# sourceMappingURL=styles.css.map */
