@@ -2275,9 +2275,56 @@ label {
     .floating-contacts-wrapper:hover ul li {
       margin-top: 10px; }
 
-.ui-dialog .ui-widget-header {
-  display: none; }
-.ui-dialog .ui-dialog-buttonpane {
-  border: none; }
+.ui-dialog {
+  width: 400px !important;
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.18); }
+  .ui-dialog .ui-dialog-titlebar {
+    display: none; }
+  .ui-dialog .ui-dialog-content img {
+    width: 100%; }
+  .ui-dialog .ui-dialog-buttonpane {
+    border: none;
+    text-align: center !important;
+    padding: 5px !important; }
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+      float: none !important; }
+      .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
+        color: #222;
+        background-color: #ffc228;
+        vertical-align: baseline;
+        border-radius: 4px !important;
+        transition: background-color 0.3s;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        outline: 0 !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        -webkit-appearance: button;
+        text-transform: none;
+        margin: 0; }
+        .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:hover, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:focus, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:active {
+          background-color: #f5bc00; }
+        .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:hover, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:focus, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:active {
+          text-decoration: none; }
+        .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:focus {
+          outline-offset: -2px; }
+        .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:active {
+          background-image: none; }
 
 /*# sourceMappingURL=styles.css.map */
