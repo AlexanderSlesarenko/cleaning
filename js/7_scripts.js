@@ -58,7 +58,7 @@ $(document).ready(function(){
     set_scroll_down();
     set_accordion();
     set_slider_buttons_click_listener();
-    // personnel_transform();
+    personnel_transform();
     set_mobile_menu();
     set_interval();
     set_picker_click_handler();
@@ -66,26 +66,26 @@ $(document).ready(function(){
     set_select_click_handler();
     set_how_we_work_left_right_buttons_listener();
     set_examples();
-    set_dialog();
+    // set_dialog();
 });
-function set_dialog() {
-    $("#dialog").dialog({
-      autoOpen: false,
-      draggable: false,
-      show: {effect: "fade", duration: 800},
-      buttons: [
-        {
-          text: "OK",
-          click: function() {
-            $(this).dialog("close");
-          }
-        }
-      ]
-    });
-    setTimeout(function func() {
-      $("#dialog").dialog("open");
-    }, 1000);
-}
+// function set_dialog() {
+//     $("#dialog").dialog({
+//       autoOpen: false,
+//       draggable: false,
+//       show: {effect: "fade", duration: 800},
+//       buttons: [
+//         {
+//           text: "OK",
+//           click: function() {
+//             $(this).dialog("close");
+//           }
+//         }
+//       ]
+//     });
+//     setTimeout(function func() {
+//       $("#dialog").dialog("open");
+//     }, 1000);
+// }
 var handler = onVisibilityChange($('#slider_buttons'), function(visible) {
     if (visible) {
         intervalID = setInterval(function() {
